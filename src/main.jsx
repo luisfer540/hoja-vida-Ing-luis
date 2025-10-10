@@ -9,7 +9,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { CvModalSoftwareProvider } from './Pages/Cliente/Context/index/Header/CvModalSoftwareProvider.jsx';
 import { ProviderExperienciaLaboral } from './Pages/Cliente/Context/hojaDeVidaCompleta/ProviderModalLaboralCertificateViewer.jsx';
-import { ProviderEstudios } from './Pages/Cliente/Context/hojaDeVidaCompleta/providerEstudios.jsx';
+import { ProviderEstudios } from './Pages/Cliente/Context/hojaDeVidaCompleta/ProviderEstudios.jsx';
+
 
 
 

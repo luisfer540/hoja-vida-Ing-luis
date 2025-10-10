@@ -13,6 +13,7 @@ import { ProviderEstudios } from './Pages/Cliente/Context/hojaDeVidaCompleta/pro
 
 
 
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>

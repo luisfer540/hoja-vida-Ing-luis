@@ -1,5 +1,6 @@
 // Importa los estilos CSS específicos para el componente CVModal
-import "../../../Styles/Index/Header/CvModal/cvModal.css";
+import "../../../Styles/Index/Header/CvModal/CVModal.css";
+
 
 // Importa el hook personalizado que gestiona la lógica del modal de CV
 import { useCVModal } from "../../../Hooks/hooksCustom/Index/Header/useCVModal";

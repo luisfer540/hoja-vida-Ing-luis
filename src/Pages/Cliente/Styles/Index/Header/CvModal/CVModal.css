@@ -1,0 +1,640 @@
+/* CV Modal Styles - Efecto 3D Tridimensional con Imagen de Fondo Visible */
+.cv-modal {
+  position: fixed;          /* Posicionamiento fijo en pantalla */
+  top: 0;                   /* Alineado superiormente */
+  left: 0;                  /* Alineado a la izquierda */
+  width: 100%;              /* Ancho completo de la pantalla */
+  height: 100%;             /* Altura completa de la pantalla */
+  z-index: 10000;           /* Nivel de apilamiento máximo */
+  visibility: hidden;       /* Oculto por defecto */
+  perspective: 1000px;      /* Perspectiva 3D para efectos espaciales */
+  perspective-origin: center center; /* Punto de origen de la perspectiva */
+}
+
+.cv-modal-backdrop {
+  position: absolute;       /* Posicionamiento absoluto */
+  top: 0;                   /* Cubre toda la pantalla */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(10px);    /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Versión para WebKit */
+}
+
+.cv-modal-container {
+  position: relative;       /* Posicionamiento relativo */
+  width: 100%;              /* Ancho completo */
+  height: 100%;             /* Altura completa */
+  display: flex;            /* Flexbox para centrado */
+  align-items: center;      /* Centrado vertical */
+  justify-content: center;  /* Centrado horizontal */
+  padding: clamp(20px, 5vw, 40px); /* Padding responsivo */
+  box-sizing: border-box;   /* Modelo de caja border-box */
+}
+
+/* SOLUCIÓN 4: Contenido del modal con imagen de fondo visible */
+.cv-modal-content {
+  position: relative;       /* Posicionamiento relativo */
+  width: 100%;              /* Ancho completo */
+  max-width: clamp(800px, 90vw, 1200px); /* Ancho máximo adaptativo */
+  max-height: clamp(670px, 85vh, 800px); /* Altura máxima adaptativa */
+  background: rgba(10, 10, 15, 0.65); /* Fondo más transparente para ver la imagen */
+  border-radius: 24px;      /* Bordes redondeados */
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.6), /* Sombra exterior */
+    0 0 0 1px rgba(255, 255, 255, 0.1), /* Borde sutil */
+    inset 0 1px 0 rgba(255, 255, 255, 0.2); /* Efecto de brillo interno */
+  backdrop-filter: blur(5px); /* Desenfoque reducido para ver mejor la imagen */
+  -webkit-backdrop-filter: blur(5px); /* Soporte para Safari */
+  overflow: hidden;         /* Oculta contenido desbordado */
+  transform-style: preserve-3d; /* Mantiene transformaciones 3D */
+  border: 1px solid rgba(0, 212, 255, 0.2); /* Borde con transparencia */
+}
+
+/* Efecto 3D específico para CIVIL con imagen de fondo */
+.cv-modal-civil {
+  background-image: url("imgs/fondoObras.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 
+    0 25px 80px rgba(255, 140, 0, 0.3),
+    0 0 0 1px rgba(255, 140, 0, 0.2),
+    inset 0 1px 0 rgba(255, 140, 0, 0.1);
+  border-color: rgba(255, 140, 0, 0.3);
+}
+
+
+/* Efecto 3D específico para SOFTWARE con imagen de fondo */
+.cv-modal-software {
+  background-image: url("imgs/fondoSoftware.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 
+    0 25px 80px rgba(0, 212, 255, 0.3), /* Sombra azul */
+    0 0 0 1px rgba(0, 212, 255, 0.2), /* Borde azul */
+    inset 0 1px 0 rgba(0, 212, 255, 0.1); /* Brillo interno azul */
+  border-color: rgba(0, 212, 255, 0.3); /* Color de borde */
+}
+
+/* Header */
+.cv-modal-header {
+  display: flex;            /* Flexbox layout */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: flex-start;  /* Alineación superior */
+  padding: clamp(20px, 4vw, 32px) clamp(20px, 4vw, 32px) 0; /* Padding adaptativo */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde inferior sutil */
+  margin-bottom: clamp(16px, 3vw, 24px); /* Margen inferior adaptativo */
+}
+
+.cv-modal-title-section {
+  flex: 1;                  /* Toma todo el espacio disponible */
+}
+
+.cv-modal-title {
+  font-size: clamp(24px, 4vw, 32px); /* Tamaño de fuente adaptativo */
+  font-weight: 700;         /* Grosor de fuente */
+  color: #fff;              /* Color blanco */
+  margin: 0 0 clamp(4px, 1vw, 8px) 0; /* Margen adaptativo */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  background: linear-gradient(135deg, #fff 0%, #00d4ff 100%); /* Gradiente de texto */
+  -webkit-background-clip: text; /* Clip de texto para gradiente en WebKit */
+  -webkit-text-fill-color: transparent; /* Texto transparente */
+  background-clip: text;    /* Clip de texto estándar */
+}
+
+.cv-modal-civil .cv-modal-title {
+  background: linear-gradient(135deg, #fff 0%, #ff8c00 100%); /* Gradiente naranja */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cv-modal-subtitle {
+  font-size: clamp(14px, 2.5vw, 18px); /* Tamaño adaptativo */
+  color: rgba(255, 255, 255, 0.7); /* Color con transparencia */
+  margin: 0;                /* Sin margen */
+  font-weight: 400;         /* Grosor normal */
+}
+
+.cv-modal-close {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+  border-radius: 50%;       /* Forma circular */
+  width: clamp(36px, 6vw, 44px); /* Ancho adaptativo */
+  height: clamp(36px, 6vw, 44px); /* Alto adaptativo */
+  display: flex;            /* Flexbox para centrado */
+  align-items: center;      /* Centrado vertical */
+  justify-content: center;  /* Centrado horizontal */
+  color: #fff;              /* Color blanco */
+  font-size: clamp(18px, 3vw, 24px); /* Tamaño adaptativo */
+  cursor: pointer;          /* Cursor tipo pointer */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
+  flex-shrink: 0;           /* No reducir tamaño */
+  margin-left: clamp(12px, 2vw, 20px); /* Margen izquierdo adaptativo */
+}
+
+.cv-modal-close:hover {
+  background: rgba(255, 59, 59, 0.8); /* Color rojo al hover */
+  border-color: rgba(255, 59, 59, 0.6); /* Borde rojo */
+  transform: scale(1.1);    /* Escalado al hover */
+  box-shadow: 0 4px 20px rgba(255, 59, 59, 0.4); /* Sombra roja */
+}
+
+/* Body */
+.cv-modal-body {
+  padding: 0 clamp(20px, 4vw, 32px); /* Padding horizontal adaptativo */
+  max-height: clamp(400px, 60vh, 500px); /* Altura máxima con scroll */
+  overflow-y: auto;         /* Scroll vertical */
+  scrollbar-width: thin;    /* Scrollbar delgada */
+  scrollbar-color: rgba(0, 212, 255, 0.5) rgba(255, 255, 255, 0.1); /* Colores personalizados */
+}
+
+.cv-modal-body::-webkit-scrollbar {
+  width: 6px;              /* Ancho del scrollbar en WebKit */
+}
+
+.cv-modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Color de pista */
+  border-radius: 3px;       /* Bordes redondeados */
+}
+
+.cv-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.5); /* Color del thumb azul */
+  border-radius: 3px;       /* Bordes redondeados */
+}
+
+.cv-modal-civil .cv-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 140, 0, 0.5); /* Color naranja para civil */
+}
+
+/* Footer completamente responsivo */
+.cv-modal-footer {
+  display: flex;                          /* Usa Flexbox para distribuir los elementos */
+  flex-wrap: wrap;                        /* Permite que los elementos se acomoden en varias líneas si no caben */
+  justify-content: flex-end;             /* Alinea los elementos al final (derecha) */
+  gap: clamp(0.5rem, 2vw, 1rem);          /* Espacio entre elementos adaptativo */
+  padding: clamp(1rem, 3vw, 1.5rem) 
+           clamp(1.25rem, 4vw, 2rem) 
+           clamp(1.25rem, 4vw, 2rem);     /* Padding superior, horizontal y inferior adaptativo */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Borde superior sutil */
+  margin-top: clamp(1rem, 3vw, 1.5rem);   /* Margen superior adaptativo */
+  width: 100%;                            /* Ocupa todo el ancho disponible */
+  box-sizing: border-box;                /* Incluye padding y borde en el cálculo del ancho */
+}
+
+.cv-modal-btn-secondary {
+  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+  color: #fff;              /* Texto blanco */
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px); /* Padding adaptativo */
+  border-radius: 12px;      /* Bordes redondeados */
+  font-size: clamp(14px, 2.5vw, 16px); /* Tamaño adaptativo */
+  font-weight: 500;         /* Grosor medio */
+  cursor: pointer;          /* Cursor pointer */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Animación suave */
+}
+
+.cv-modal-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2); /* Fondo más visible al hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Sombra al hover */
+}
+
+.cv-modal-btn-primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); /* Gradiente azul */
+  border: none;             /* Sin borde */
+  color: #000;              /* Texto negro */
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px); /* Padding adaptativo */
+  border-radius: 12px;      /* Bordes redondeados */
+  font-size: clamp(14px, 2.5vw, 16px); /* Tamaño adaptativo */
+  font-weight: 600;         /* Grosor semibold */
+  cursor: pointer;          /* Cursor pointer */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Animación suave */
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3); /* Sombra azul */
+}
+
+.cv-modal-civil .cv-modal-btn-primary {
+  background: linear-gradient(135deg, #ff8c00 0%, #cc7000 100%); /* Gradiente naranja */
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3); /* Sombra naranja */
+}
+
+.cv-modal-btn-primary:hover {
+  transform: translateY(-2px); /* Elevación al hover */
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4); /* Sombra más intensa */
+}
+
+.cv-modal-civil .cv-modal-btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4); /* Sombra naranja intensa */
+}
+
+/* Content Styles */
+.cv-content {
+  color: #fff;              /* Texto blanco */
+}
+
+.cv-section {
+  margin-bottom: clamp(20px, 4vw, 32px); /* Margen inferior adaptativo */
+}
+
+.cv-section-title {
+  font-size: clamp(18px, 3vw, 24px); /* Tamaño adaptativo */
+  font-weight: 600;         /* Grosor semibold */
+  color: #00d4ff;           /* Color azul */
+  margin-bottom: clamp(12px, 2vw, 16px); /* Margen inferior adaptativo */
+  display: flex;            /* Flexbox layout */
+  align-items: center;      /* Centrado vertical */
+  gap: clamp(8px, 1.5vw, 12px); /* Espacio entre elementos */
+}
+
+.civil-content .cv-section-title {
+  color: #ff8c00;           /* Color naranja para civil */
+}
+
+.cv-section-title i {
+  font-size: clamp(16px, 2.5vw, 20px); /* Tamaño adaptativo de iconos */
+}
+
+.cv-section-text {
+  font-size: clamp(14px, 2.5vw, 16px); /* Tamaño adaptativo */
+  line-height: 1.6;        /* Interlineado amplio */
+  color: rgba(255, 255, 255, 0.9); /* Texto blanco con transparencia */
+  margin-bottom: clamp(16px, 3vw, 20px); /* Margen inferior adaptativo */
+}
+
+/* Skills Grid */
+.cv-skills-grid {
+  display: grid;            /* Grid layout */
+  gap: clamp(12px, 2vw, 16px); /* Espacio entre elementos */
+}
+
+.cv-skill-item {
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  padding: clamp(12px, 2vw, 16px); /*
+  border-radius: 12px;      /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+}
+
+.cv-skill-name {
+  display: block;           /* Elemento de bloque */
+  font-size: clamp(13px, 2.2vw, 15px); /* Tamaño adaptativo */
+  font-weight: 500;         /* Grosor medio */
+  color: #fff;              /* Texto blanco */
+  margin-bottom: clamp(6px, 1vw, 8px); /* Margen inferior adaptativo */
+}
+
+.cv-skill-bar {
+  width: 100%;             /* Ancho completo */
+  height: 6px;             /* Altura fija */
+  background: rgba(255, 255, 255, 0.1); /* Fondo de la barra */
+  border-radius: 3px;       /* Bordes redondeados */
+  overflow: hidden;         /* Oculta desbordamiento */
+}
+
+.cv-skill-progress {
+  height: 100%;            /* Altura completa */
+  background: linear-gradient(90deg, #00d4ff 0%, #0099cc 100%); /* Gradiente azul */
+  border-radius: 3px;       /* Bordes redondeados */
+  transition: width 1s ease-out; /* Animación de llenado */
+}
+
+.civil-content .cv-skill-progress {
+  background: linear-gradient(90deg, #ff8c00 0%, #cc7000 100%); /* Gradiente naranja */
+}
+
+/* Tech Grid */
+.cv-tech-grid {
+  display: grid;            /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas adaptables */
+  gap: clamp(16px, 3vw, 24px); /* Espacio entre elementos */
+}
+
+.cv-tech-category {
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  padding: clamp(16px, 3vw, 20px); /* Padding adaptativo */
+  border-radius: 16px;      /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+}
+
+.cv-tech-category-title {
+  font-size: clamp(16px, 2.8vw, 18px); /* Tamaño adaptativo */
+  font-weight: 600;         /* Grosor semibold */
+  color: #00d4ff;           /* Color azul */
+  margin-bottom: clamp(12px, 2vw, 16px); /* Margen inferior adaptativo */
+}
+
+.civil-content .cv-tech-category-title {
+  color: #ff8c00;           /* Color naranja para civil */
+}
+
+.cv-tech-items {
+  display: flex;            /* Flexbox layout */
+  flex-wrap: wrap;          /* Ajuste de línea */
+  gap: clamp(6px, 1vw, 8px); /* Espacio entre elementos */
+}
+
+.cv-tech-item {
+  background: rgba(0, 212, 255, 0.2); /* Fondo azul semitransparente */
+  color: #00d4ff;           /* Texto azul */
+  padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px); /* Padding adaptativo */
+  border-radius: 20px;      /* Forma de cápsula */
+  font-size: clamp(12px, 2vw, 14px); /* Tamaño adaptativo */
+  font-weight: 500;         /* Grosor medio */
+  border: 1px solid rgba(0, 212, 255, 0.3); /* Borde azul */
+}
+
+.civil-content .cv-tech-item {
+  background: rgba(255, 140, 0, 0.2); /* Fondo naranja semitransparente */
+  color: #ff8c00;           /* Texto naranja */
+  border-color: rgba(255, 140, 0, 0.3); /* Borde naranja */
+}
+
+/* Projects Grid */
+.cv-projects-grid {
+  display: grid;            /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas adaptables */
+  gap: clamp(16px, 3vw, 20px); /* Espacio entre elementos */
+}
+
+.cv-project-item {
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  padding: clamp(16px, 3vw, 20px); /* Padding adaptativo */
+  border-radius: 16px;      /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
+}
+
+.cv-project-item:hover {
+  transform: translateY(-4px); /* Elevación al hover */
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2); /* Sombra azul */
+  border-color: rgba(0, 212, 255, 0.3); /* Borde azul al hover */
+}
+
+.civil-content .cv-project-item:hover {
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2); /* Sombra naranja */
+  border-color: rgba(255, 140, 0, 0.3); /* Borde naranja */
+}
+
+.cv-project-title {
+  font-size: clamp(16px, 2.8vw, 18px); /* Tamaño adaptativo */
+  font-weight: 600;         /* Grosor semibold */
+  color: #fff;              /* Texto blanco */
+  margin-bottom: clamp(8px, 1.5vw, 12px); /* Margen inferior adaptativo */
+}
+
+.cv-project-description {
+  font-size: clamp(13px, 2.2vw, 15px); /* Tamaño adaptativo */
+  color: rgba(255, 255, 255, 0.8); /* Texto con transparencia */
+  margin-bottom: clamp(12px, 2vw, 16px); /* Margen inferior adaptativo */
+  line-height: 1.5;        /* Interlineado */
+}
+
+.cv-project-tech {
+  display: flex;            /* Flexbox layout */
+  flex-wrap: wrap;          /* Ajuste de línea */
+  gap: clamp(4px, 0.8vw, 6px); /* Espacio entre elementos */
+}
+
+.cv-project-tech-item {
+  background: rgba(0, 212, 255, 0.15); /* Fondo azul claro */
+  color: #00d4ff;           /* Texto azul */
+  padding: clamp(2px, 0.5vw, 4px) clamp(6px, 1vw, 8px); /* Padding adaptativo */
+  border-radius: 12px;      /* Bordes redondeados */
+  font-size: clamp(11px, 1.8vw, 13px); /* Tamaño adaptativo */
+  font-weight: 500;         /* Grosor medio */
+}
+
+.civil-content .cv-project-tech-item {
+  background: rgba(255, 140, 0, 0.15); /* Fondo naranja claro */
+  color: #ff8c00;           /* Texto naranja */
+}
+
+/* Experience */
+.cv-experience-item {
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  padding: clamp(16px, 3vw, 20px); /* Padding adaptativo */
+  border-radius: 16px;      /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+  margin-bottom: clamp(16px, 3vw, 20px); /* Margen inferior adaptativo */
+}
+
+.cv-experience-title {
+  font-size: clamp(16px, 2.8vw, 18px); /* Tamaño adaptativo */
+  font-weight: 600;         /* Grosor semibold */
+  color: #fff;              /* Texto blanco */
+  margin-bottom: clamp(4px, 0.8vw, 6px); /* Margen inferior adaptativo */
+}
+
+.cv-experience-company {
+  font-size: clamp(14px, 2.3vw, 16px); /* Tamaño adaptativo */
+  color: #00d4ff;           /* Color azul */
+  margin-bottom: clamp(12px, 2vw, 16px); /* Margen inferior adaptativo */
+  font-weight: 500;         /* Grosor medio */
+}
+
+.civil-content .cv-experience-company {
+  color: #ff8c00;           /* Color naranja para civil */
+}
+
+.cv-experience-list {
+  list-style: none;         /* Sin viñetas */
+  padding: 0;               /* Sin padding */
+  margin: 0;                /* Sin margen */
+}
+
+.cv-experience-list li {
+  font-size: clamp(13px, 2.2vw, 15px); /* Tamaño adaptativo */
+  color: rgba(255, 255, 255, 0.8); /* Texto con transparencia */
+  margin-bottom: clamp(6px, 1vw, 8px); /* Margen inferior adaptativo */
+  padding-left: clamp(16px, 3vw, 20px); /* Padding izquierdo adaptativo */
+  position: relative;       /* Posicionamiento relativo */
+}
+
+.cv-experience-list li::before {
+  content: '▶';             /* Icono de viñeta */
+  position: absolute;       /* Posicionamiento absoluto */
+  left: 0;                  /* Alineado a la izquierda */
+  color: #00d4ff;           /* Color azul */
+  font-size: clamp(10px, 1.8vw, 12px); /* Tamaño adaptativo */
+}
+
+.civil-content .cv-experience-list li::before {
+  color: #ff8c00;           /* Color naranja para civil */
+}
+
+/* Certifications */
+.cv-certifications {
+  display: grid;            /* Grid layout */
+  gap: clamp(12px, 2vw, 16px); /* Espacio entre elementos */
+}
+
+.cv-cert-item {
+  display: flex;            /* Flexbox layout */
+  align-items: center;      /* Centrado vertical */
+  gap: clamp(12px, 2vw, 16px); /* Espacio entre elementos */
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  padding: clamp(12px, 2vw, 16px); /* Padding adaptativo */
+  border-radius: 12px;      /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+}
+
+.cv-cert-item i {
+  color: #00d4ff;           /* Color azul */
+  font-size: clamp(16px, 2.5vw, 20px); /* Tamaño adaptativo */
+}
+
+.civil-content .cv-cert-item i {
+  color: #ff8c00;           /* Color naranja para civil */
+}
+
+.cv-cert-item span {
+  font-size: clamp(14px, 2.3vw, 16px); /* Tamaño adaptativo */
+  color: rgba(255, 255, 255, 0.9); /* Texto con transparencia */
+  font-weight: 500;         /* Grosor medio */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cv-modal-container {
+    padding: 10px;
+    width: 100vw;               /* Asegura que el contenedor no se desborde */
+    box-sizing: border-box;     /* Incluye padding en el ancho total */
+  }
+
+  .cv-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;           /* Permite scroll si el contenido es largo */
+    width: 100%;
+  }
+
+  .cv-modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .cv-modal-close {
+    align-self: flex-end;
+    margin-left: auto;          /* Empuja el botón hacia la derecha */
+  }
+
+  .cv-tech-grid,
+  .cv-projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cv-modal-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;                  /* Espacio entre botones */
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .cv-modal-footer .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* Animaciones */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;             /* Inicio invisible */
+    transform: scale(0.7) rotateX(-15deg) rotateY(5deg) translateZ(-200px); /* Transformación 3D */
+  }
+  to {
+    opacity: 1;             /* Visible completamente */
+    transform: scale(1) rotateX(0deg) rotateY(0deg) translateZ(0px); /* Estado final */
+  }
+}
+
+@keyframes skillBarFill {
+  from {
+    width: 0;               /* Barra vacía */
+  }
+  to {
+    width: var(--skill-width); /* Ancho completo según variable */
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .cv-modal-content,
+  .cv-project-item,
+  .cv-modal-close,
+  .cv-modal-btn-primary,
+  .cv-modal-btn-secondary {
+    transition: none;       /* Sin transiciones */
+  }
+  
+  .cv-skill-progress {
+    transition: none;       /* Sin animación de barra */
+  }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .cv-modal-content {
+    border: 2px solid #fff; /* Borde reforzado */
+  }
+  
+  .cv-section-title,
+  .cv-skill-name,
+  .cv-project-title {
+    color: #fff;            /* Texto blanco puro */
+  }
+}
+
+/* Estilos de impresión */
+@media print {
+  .cv-modal {
+    display: none;          /* Oculta el modal al imprimir */
+  }
+}
+
+/* Botón especial para ver CV */
+.cv-btn-view-cv {
+  background: linear-gradient(135deg, #c04e02 0%, #ccc900 100%); /* Gradiente personalizado */
+  color: #000;              /* Texto negro */
+  font-weight: 600;         /* Grosor semibold */
+  font-size: clamp(14px, 2.5vw, 16px); /* Tamaño adaptativo */
+  padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 28px); /* Padding adaptativo */
+  border-radius: 14px;      /* Bordes redondeados */
+  border: none;             /* Sin borde */
+  cursor: pointer;          /* Cursor pointer */
+  box-shadow: 0 6px 20px rgba(165, 184, 2, 0.3); /* Sombra personalizada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px;      /* Espaciado entre letras */
+  margin-left: auto;        /* Empuja el botón hacia la derecha */
+  display: block;           /* Asegura que el botón respete el margen */
+}
+
+.cv-btn-view-cv:hover {
+  transform: translateY(-3px) scale(1.03); /* Efecto 3D al hover */
+  box-shadow: 0 10px 30px rgba(0, 255, 76, 0.4); /* Sombra intensificada */
+}
+
+.cv-btn-view-cv:active {
+  transform: scale(0.98);   /* Efecto de click */
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2); /* Sombra reducida */
+}
+
+/* Variante civil del botón */
+.civil-content .cv-btn-view-cv {
+  background: linear-gradient(135deg, #ff8c00 0%, #cc7000 100%); /* Gradiente naranja */
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3); /* Sombra naranja */
+  color: #000;              /* Texto negro */
+}
+
+.civil-content .cv-btn-view-cv:hover {
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4); /* Sombra naranja intensa */
+}

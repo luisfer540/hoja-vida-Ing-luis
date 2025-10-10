@@ -1,0 +1,30 @@
+:root {
+  --ancho-central: 960px; /* Ajusta al ancho real del CV */
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Laterales */
+.lateralIzquierdo,
+.lateralDerecho {
+  flex: 1;
+  background: radial-gradient(circle at center, #0a0a0a 0%, #1a1a1a 100%);
+  opacity: 0.8;
+}
+
+/* Centro */
+.centro {
+  width: var(--ancho-central);
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  opacity: 0.9;
+}

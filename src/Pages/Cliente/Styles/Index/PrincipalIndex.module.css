@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #4285f4;
+  --bg-dark: #1a1a1a;
+  --text-light: #ffffff;
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  background-image: url('/imgs/foto3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh; /* Cambiado de max-height a min-height */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Permite scroll vertical pero no horizontal */
+}
+
+
+/* Overlay oscuro para legibilidad */
+.layout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  position: relative; /* Para posicionamiento correcto */
+  z-index: 1; /* Por encima del overlay */
+}
+
+@media (max-width: 576px) {
+  .layout {
+    background-position: center center;
+  }
+}

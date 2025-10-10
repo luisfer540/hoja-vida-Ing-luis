@@ -1,0 +1,471 @@
+/* ===================================
+   MODAL DE CONTACTO - DISEÑO MEJORADO
+   =================================== */
+
+.modal {
+  /* Fondo con imagen y gradiente superpuesto */
+  background-image: 
+    linear-gradient(145deg, 
+      rgba(10, 10, 15, 0.75) 0%,     /* Ajustado para mejor legibilidad */
+      rgba(20, 20, 30, 0.80) 50%, 
+      rgba(5, 5, 10, 0.75) 100%),
+    url("/imgs/logo.png");
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;      /* Cambiado de lighten a overlay */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Soporte Safari */
+  
+  padding: clamp(1.5rem, 4vw, 2.5rem); /* Padding responsivo */
+  border-radius: 20px;                 /* Bordes más redondeados */
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  outline: none;
+  color: white;
+  
+  /* Sombras mejoradas con efecto neón */
+  box-shadow: 
+    0 25px 80px rgba(0, 204, 255, 0.4),
+    0 0 0 1px rgba(0, 204, 255, 0.3),
+    inset 0 1px 0 rgba(0, 204, 255, 0.2),
+    0 0 40px rgba(0, 204, 255, 0.15);  /* Resplandor adicional */
+  
+  border: 1px solid rgba(0, 204, 255, 0.4);
+  
+  /* Animación de entrada */
+  animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animación de aparición */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.overlay {
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(10, 10, 30, 0.90) 100%);     /* Gradiente en el overlay */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  
+  /* Animación del overlay */
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Botón de cerrar mejorado */
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 77, 77, 0.9);
+  color: white;
+  border: 1px solid rgba(255, 77, 77, 0.5);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 50, 50, 1);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 77, 77, 0.5);
+}
+
+.closeBtn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Título mejorado */
+.titulo {
+  font-size: clamp(1.4rem, 4vw, 2rem);  /* Tamaño responsivo */
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  color: #00ccff;
+  font-weight: 700;
+  text-shadow: 
+    0 0 10px rgba(0, 204, 255, 0.6),
+    0 0 20px rgba(0, 204, 255, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;                          /* Más espacio entre campos */
+}
+
+/* ===================================
+   INPUTS Y TEXTAREA CON PLACEHOLDERS
+   =================================== */
+
+input,
+textarea {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, 
+    rgba(20, 20, 35, 0.60) 0%, 
+    rgba(30, 30, 50, 0.70) 50%, 
+    rgba(15, 15, 30, 0.65) 100%);
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  resize: none;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 0 0 rgba(0, 204, 255, 0);      /* Preparado para animación */
+}
+
+/* Efecto focus en inputs */
+input:focus,
+textarea:focus {
+  border-color: rgba(0, 204, 255, 0.8);
+  background: linear-gradient(145deg, 
+    rgba(25, 25, 45, 0.70) 0%, 
+    rgba(35, 35, 60, 0.80) 50%, 
+    rgba(20, 20, 40, 0.75) 100%);
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.4),
+    0 0 0 3px rgba(0, 204, 255, 0.2),  /* Resplandor externo */
+    0 0 20px rgba(0, 204, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   ESTILOS DE PLACEHOLDERS
+   =================================== */
+
+/* Chrome, Safari, Edge, Opera */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 204, 255, 0.5);       /* Color cyan semitransparente */
+  font-style: italic;
+  font-weight: 400;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Firefox */
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: rgba(0, 204, 255, 0.5);
+  font-style: italic;
+  font-weight: 400;
+  opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: rgba(0, 204, 255, 0.5);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Microsoft Edge */
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: rgba(0, 204, 255, 0.5);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Efecto al hacer focus - placeholder desaparece suavemente */
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: rgba(0, 204, 255, 0.2);
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/* Placeholder alternativo con otro color */
+input[name="user_whatsapp"]::placeholder {
+  color: rgba(34, 197, 94, 0.5);       /* Verde para WhatsApp */
+  font-weight: 500;
+}
+
+input[type="email"]::placeholder::before {
+  content: '📧 ';
+}
+
+input[type="tel"]::placeholder::before {
+  content: '📱 ';
+}
+
+/* ===================================
+   BOTÓN DE ENVÍO MEJORADO
+   =================================== */
+
+button[type="submit"] {
+  padding: 1rem 2rem;
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, 
+    rgb(0, 150, 255) 0%, 
+    rgba(0, 100, 255, 0.9) 50%, 
+    rgba(0, 80, 255, 0.85) 100%);
+  border: 2px solid rgba(0, 204, 255, 0.5);
+  color: #ffffff;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 25px rgba(0, 150, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto de brillo animado en el botón */
+button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, 
+    rgb(0, 180, 255) 0%, 
+    rgba(0, 130, 255, 1) 50%, 
+    rgba(0, 100, 255, 0.95) 100%);
+  border-color: rgba(0, 255, 255, 0.8);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 12px 35px rgba(0, 150, 255, 0.6),
+    0 0 40px rgba(0, 204, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+button[type="submit"]:hover::before {
+  left: 100%;
+}
+
+button[type="submit"]:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 
+    0 5px 15px rgba(0, 150, 255, 0.4),
+    inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estado de carga del botón */
+button[type="submit"]:disabled {
+  background: linear-gradient(135deg, 
+    rgba(100, 100, 120, 0.5) 0%, 
+    rgba(80, 80, 100, 0.5) 100%);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+/* ===================================
+   MENSAJES DE ÉXITO Y ERROR
+   =================================== */
+
+.exito {
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: 10px;
+  animation: messageSlideIn 0.4s ease-out;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+}
+
+.error {
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 10px;
+  animation: messageSlideIn 0.4s ease-out;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .titulo {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .formulario {
+    gap: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .closeBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 98%;
+    padding: 1.2rem;
+  }
+
+  .titulo {
+    font-size: 1.2rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   ACCESIBILIDAD
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .modal,
+  .overlay,
+  input,
+  textarea,
+  button,
+  .exito,
+  .error {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  .modal {
+    border: 2px solid #00ccff;
+  }
+
+  input,
+  textarea {
+    border: 2px solid rgba(0, 204, 255, 0.6);
+  }
+
+  button[type="submit"] {
+    border: 2px solid #00ffff;
+  }
+}
+
+
+
+
+
+@keyframes placeholderPulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  animation: placeholderPulse 2s ease-in-out infinite;
+}
+
+input::placeholder,
+textarea::placeholder {
+  background: linear-gradient(90deg, 
+    rgba(0, 204, 255, 0.6) 0%,
+    rgba(0, 255, 200, 0.4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}

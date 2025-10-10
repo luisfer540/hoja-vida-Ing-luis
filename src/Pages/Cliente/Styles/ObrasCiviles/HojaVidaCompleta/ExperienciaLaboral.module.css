@@ -1,0 +1,184 @@
+.body {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  margin: 1rem auto;
+  color: #f5f5f5;
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: clamp(24px, 4vw, 32px);
+ color:rgb(0, 162, 255);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(0, 162, 255);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.empresa {
+  color:rgb(0, 162, 255);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.icon {
+  color: rgba(19, 133, 199, 0.2);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Botones eléctricos alineados horizontalmente */
+.buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Botón eléctrico estilizado */
+.btnElectrico {
+  background-color: rgba(255, 193, 7, 0.05);
+  color: #07a4ff;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  min-width: 120px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnElectrico:hover {
+  background-color: rgba(19, 133, 199, 0.2);
+  transform: scale(1.03);
+}
+
+/* Responsive: pantallas pequeñas */
+@media (max-width: 480px) {
+  .body {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .list li {
+    padding: 0.8rem;
+  }
+
+  .buttonsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnElectrico {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ───────────────────────────────────────────── */
+/* 🔧 NUEVO: Estilos para botones del carrusel 100% responsivos */
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 193, 7, 0.2);
+  border: none;
+  color: #ffc107;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carouselBtn:hover {
+  background-color: rgba(255, 193, 7, 0.4);
+}
+
+.carouselBtn.left {
+  left: 10px;
+}
+
+.carouselBtn.right {
+  right: 10px;
+}
+
+/* Responsive: pantallas medianas */
+@media (max-width: 768px) {
+  .carouselBtn {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+  }
+
+  .carouselBtn.left {
+    left: 5px;
+  }
+
+  .carouselBtn.right {
+    right: 5px;
+  }
+}
+
+/* Responsive: pantallas pequeñas */
+@media (max-width: 480px) {
+  .carouselBtn {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    top: auto;
+    bottom: 10px;
+    transform: none;
+  }
+
+  .carouselBtn.left {
+    left: 20%;
+  }
+
+  .carouselBtn.right {
+    right: 20%;
+  }
+}

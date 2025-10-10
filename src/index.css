@@ -1,0 +1,60 @@
+/* Agregar al final de tu archivo CSS principal o en un archivo separado */
+
+/* Asegurar que el contenido principal no se superponga */
+.main-content,
+.app-content,
+#root > div:not(.pill-nav-container) {
+  
+  position: relative;
+  z-index: 1;
+}
+
+/* Resetear cualquier padding-top global que pueda interferir */
+html, body {
+  padding-top: 0 !important;
+}
+
+/* Asegurar que el navbar siempre esté visible */
+.pill-nav-container {
+  z-index: 9999 !important;
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .pill-nav-container {
+    width: calc(100% - 0.5rem);
+    top: 0.25rem;
+  }
+  
+  .pill-nav {
+    padding: 4px 0.5rem;
+  }
+}
+
+/* Para laptops grandes */
+@media (min-width: 1440px) {
+  .pill-nav-container {
+    top: 2rem;
+  }
+  
+  .pill-nav {
+    --nav-h: 56px;
+    --logo-size: 52px;
+    --pill-pad-x: 28px;
+    --font-size: 17px;
+  }
+}
+
+/* Para monitores muy grandes */
+@media (min-width: 1920px) {
+  .pill-nav-container {
+    top: 2.5rem;
+  }
+  
+  .pill-nav {
+    --nav-h: 60px;
+    --logo-size: 56px;
+    --pill-pad-x: 32px;
+    --font-size: 18px;
+  }
+}

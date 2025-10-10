@@ -1,0 +1,188 @@
+.modal {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  outline: none;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 77, 77, 0.8);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.downloadBtn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: rgba(0, 200, 83, 0.8);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.downloadBtn:hover {
+  background-color: rgba(0, 150, 36, 0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 600px; /* Altura fija */
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pdfViewer,
+.image {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: auto;
+  border: none;
+}
+
+.spacer {
+  height: 12px;
+}
+
+.downloadBtn {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto 16px auto;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background-color: #218838;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    height: 500px;
+  }
+
+  .downloadBtn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    height: 450px;
+  }
+
+  .closeBtn {
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+  }
+}

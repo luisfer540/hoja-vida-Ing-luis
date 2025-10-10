@@ -1,0 +1,12 @@
+/* ATS.css */
+
+
+@media print {
+  .cv-ats-print {
+    visibility: visible !important;
+    position: static !important;
+    transform: none !important;
+    height: auto !important;
+    z-index: auto !important;
+  }
+}

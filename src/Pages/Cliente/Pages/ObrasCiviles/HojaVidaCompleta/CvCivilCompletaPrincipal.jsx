@@ -9,6 +9,7 @@ import { DatosPersonales } from './boody/datosPersonales/DatosPersonales';
 import { Estudios } from './boody/estuidosRealizados/Estudios';
 import { ExperienciaLaboral } from './boody/experienciaLaboral/ExperienciaLaboral';
 import { Habilidades } from './boody/habilidades/Habilidades';
+import { ComoponenteSEO } from '../../ComoponenteSEO';
 
 
 
@@ -25,6 +26,13 @@ export const CvCivilCompletaPrincipal = () => {
 
   return (
     <div className={styles.layout}>
+          <ComoponenteSEO
+                title="Obras Civiles y Desarrolador de software"
+                description="Conocmiento en obras civiles y desarrollo de software."
+                canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
+                image="/imgs/bannerSeo.png"
+                type="website"
+              />  
       <BrraIzquierda />
 
       <div className={styles.wrapper}>

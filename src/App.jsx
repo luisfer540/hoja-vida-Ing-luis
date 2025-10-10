@@ -8,6 +8,7 @@ import styles from './Pages/Cliente/Styles/Index/PrincipalIndex.module.css';
 
 import { useModal } from './Pages/Cliente/Context/index/Header/ModalProvider';
 import { ContactoModal } from './Pages/Cliente/Pages/contactame/ContactoModal';
+import { ComoponenteSEO } from './Pages/Cliente/Pages/ComoponenteSEO';
 
 
 function App() {
@@ -15,6 +16,13 @@ const { activeModal, handleModalClose } = useModal()
 
   return (
     <div className={styles.layout}>
+          <ComoponenteSEO
+                title="Obras Civiles y Desarrolador de software"
+                description="Conocmiento en obras civiles y desarrollo de software."
+                canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
+                image="/imgs/bannerSeo.png"
+                type="website"
+              />  
       <Navbar />
       <Routes>
         <Route path="/" element={<PrincipalIndex />} />

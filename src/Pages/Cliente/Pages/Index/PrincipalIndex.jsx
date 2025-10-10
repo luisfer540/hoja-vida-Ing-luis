@@ -13,8 +13,8 @@ export const PrincipalIndex = () => {
         <ComoponenteSEO
           title="Obras Civiles y Desarrolador de software"
           description="Conocmiento en obras civiles y desarrollo de software."
-          canonical="https://www.tusitio.com"
-          image="https://www.tusitio.com/bannerSeo.png"
+          canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
+          image="/public/imgs/bannerSeo.png"
           type="website"
         />
         <Inicio />

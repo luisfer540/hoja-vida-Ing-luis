@@ -1,4 +1,4 @@
-import { PillNav } from './PillNav';
+
 import { CVModal } from './CVModal';
 import { TransparentNav } from './TransparentNav';
 import { useTransparentNav } from '../../../Hooks/hooksCustom/Index/Header/useTransparentNav';

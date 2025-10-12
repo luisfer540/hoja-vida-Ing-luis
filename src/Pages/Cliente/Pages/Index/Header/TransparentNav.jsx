@@ -1,4 +1,4 @@
-// src/Components/TransparentNav.jsx
+// TransparentNav.jsx
 import React, { useState, useRef } from "react";
 import styles from "../../../Styles/Index/Header/TransparentNav.module.css";
 import { useModal } from "../../../Context/index/Header/ModalProvider";
@@ -109,7 +109,11 @@ export const TransparentNav = ({
           ))}
         </ul>
 
-        <button className={styles.hamburger} onClick={toggleMobileMenu}>
+        <button 
+          className={`${styles.hamburger} ${isMobileOpen ? styles.open : ''}`} 
+          onClick={toggleMobileMenu}
+          aria-label="Menú de navegación"
+        >
           <span />
           <span />
           <span />
@@ -126,18 +130,20 @@ export const TransparentNav = ({
                 item.modalOptions ? (
                   <details>
                     <summary>{item.label}</summary>
-                    {item.modalOptions.map((option, j) => (
-                      <button
-                        key={j}
-                        className={styles.mobileOption}
-                        onClick={() => {
-                          handleModalOpen(option.type);
-                          setIsMobileOpen(false);
-                        }}
-                      >
-                        {option.label}
-                      </button>
-                    ))}
+                    <div className={styles.mobileSubmenu}>
+                      {item.modalOptions.map((option, j) => (
+                        <button
+                          key={j}
+                          className={styles.mobileOption}
+                          onClick={() => {
+                            handleModalOpen(option.type);
+                            setIsMobileOpen(false);
+                          }}
+                        >
+                          {option.label}
+                        </button>
+                      ))}
+                    </div>
                   </details>
                 ) : (
                   <button

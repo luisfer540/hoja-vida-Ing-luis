@@ -5,17 +5,27 @@ export const useCustomEstudios = () => {
   const [imageUrl, setImageUrl] = useState('');
 
   const imageMap = {
-    'Obras Civiles': '/certificados/obrasciviles.jpg.png',
+    'Obras Civiles': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299236/obrasciviles.jpg_qsttt4.png',
+
     'Análisis y Desarrollo de Software': '/certificados/desarrollo-software.jpg',
-    'Apliacion de la hoja de la hoja de calculo de microsoft excel en levantamientos topograficos planimetricos': '/certificados/planimetria.png',
-    'Costos y presupuestos para edificaciones': '/certificados/costosEdificaciones.png',
-    'Básico en costos y presupuestos': '/certificados/basicocostosypresupuesto.png',
-    'Interpretación de planos estructurales': '/certificados/planosEstructurales.png',
+
+    'Apliacion de la hoja de la hoja de calculo de microsoft excel en levantamientos topograficos planimetricos': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299240/planimetria_yqe6yj.png',
+
+    'Costos y presupuestos para edificaciones': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299241/costosEdificaciones_lfal5v.png',
+
+    'Básico en costos y presupuestos': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299237/basicocostosypresupuesto_pkqjhc.png',
+
+    'Interpretación de planos estructurales': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299241/planosEstructurales_n4ylrk.png',
+
     'Trabajo seguro en alturas': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299241/trabajoSeguroEnAlturas_tj2cvl.png',
-    'Microsoft Project:Aplicacion en la programacion de obras': '/certificados/programacionDeObras.png',
-    'Pinturas arquitectónicas': '/certificados/pinturasArquitectonica.png',
-    'Mármoles y granitos': '/certificados/marmoles-granitos.png',
-    'Estucos': '/certificados/estucos.png'
+
+    'Microsoft Project:Aplicacion en la programacion de obras': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299241/programacionDeObras_vg7kxj.png',
+
+    'Pinturas arquitectónicas': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299241/pinturasArquitectonica_vkmpxn.png',
+
+    'Mármoles y granitos': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299240/marmoles-granitos_hrsfkm.png',
+
+    'Estucos': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299240/estucos_mpdk5a.png'
   };
 
    const otrosCursos = [

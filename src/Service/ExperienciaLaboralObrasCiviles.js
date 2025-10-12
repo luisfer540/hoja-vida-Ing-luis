@@ -1,21 +1,35 @@
 export const experienciaObrasCiviles = [
   {
     empresa: 'G-vial',
+
     url: 'https://www.gvial.com.co',
+
     cargo: 'Supervisor de Obra',
+
     fecha: '8/01/2023 - 27/01/2024',
+
     proyecto: 'Instalacion de la señalizacion vertical y horizontal, en la red vial a cargo del departamento de anioquia',
-    certificado: '/experiencia/Gvial/GvialCertificado.png',
+
+    certificado: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302724/GvialCertificado_dnutal.png',
+
     imagenes: [
-      { src: '/experiencia/Gvial/1.jpeg', descripcion: 'Localizacion y demarcacion para que las cuadrillas instalen señales nuevas,remplazos y retiros.' },
-      { src: '/experiencia/Gvial/2.jpeg', descripcion: 'verificar la correcta instalacion de cada señal instalada,con su registro fotografico, y geolocalizacion segun el KMZ' },
-      { src: '/experiencia/Gvial/4.jpeg', descripcion: 'Verificacion estado del estado del pavimento donde se va hacer la dermarcacion, antes de hacer la dermcacion. Que este limpia de suciedad, sin humedad y que las patologias del pavimento no vayan afectar el estado de la pintura aplicada. Registro fotografico del antes de la demarcacion' },
-      { src: '/experiencia/Gvial/3.jpeg', descripcion: 'Registro fotografico durante la demarcacion, prueba de expesores cada 2km' },
-      { src: '/experiencia/Gvial/5.jpeg', descripcion: 'Tomar Registro fotografico despues de la demarcacion y verificacion de la dermacion' },
-      { src: '/experiencia/Gvial/6.jpeg', descripcion: 'Hacer pruebas de expesores y llenar formato correspondiente a las pruebas de expesores' },
-      { src: '/experiencia/Gvial/7.jpeg', descripcion: 'M2: revisar medidas de acuerdo a diseño estipulado por la norma, pruebas de expesores y reflectividad, llenar formato correspondiente (cantidades, y geolocalizacion segun kmz)' },
-      { src: '/experiencia/Gvial/8.jpeg', descripcion: 'Pruebas de reflectividad' },
-      { src: '/experiencia/Gvial/9.jpeg', descripcion: 'Informe de catidades diarias,informe semanal,Informe mensual,corte de obra,llenado de bitacora de obra' },
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302704/1_axnxha.jpg', descripcion: 'Localizacion y demarcacion para que las cuadrillas instalen señales nuevas,remplazos y retiros.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302706/2_aqw9xr.jpg', descripcion: 'verificar la correcta instalacion de cada señal instalada,con su registro fotografico, y geolocalizacion segun el KMZ' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302710/4_bkm0ak.jpg', descripcion: 'Verificacion estado del estado del pavimento donde se va hacer la dermarcacion, antes de hacer la dermcacion. Que este limpia de suciedad, sin humedad y que las patologias del pavimento no vayan afectar el estado de la pintura aplicada. Registro fotografico del antes de la demarcacion' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302708/3_qdd0y1.jpg', descripcion: 'Registro fotografico durante la demarcacion, prueba de expesores cada 2km' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302712/5_zcerl6.jpg', descripcion: 'Tomar Registro fotografico despues de la demarcacion y verificacion de la dermacion' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302715/6_ovalv0.jpg', descripcion: 'Hacer pruebas de expesores y llenar formato correspondiente a las pruebas de expesores' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302717/7_vvancg.jpg', descripcion: 'M2: revisar medidas de acuerdo a diseño estipulado por la norma, pruebas de expesores y reflectividad, llenar formato correspondiente (cantidades, y geolocalizacion segun kmz)' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302719/8_fstjlh.jpg', descripcion: 'Pruebas de reflectividad' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760302722/9_ducbk2.jpg', descripcion: 'Informe de catidades diarias,informe semanal,Informe mensual,corte de obra,llenado de bitacora de obra' },
 
     ]
   },

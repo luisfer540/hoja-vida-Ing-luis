@@ -707,3 +707,79 @@
     padding: 10px 16px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Quitar línea azul del botón */
+.cv-btn-view-cv {
+  text-decoration: none; /* Quita subrayado si es un enlace */
+  outline: none; /* Quita el outline al hacer focus */
+}
+
+.cv-btn-view-cv:focus {
+  outline: none; /* Quita outline en estado focus */
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.3); /* Agrega un box-shadow para accesibilidad */
+}
+
+.civil-content .cv-btn-view-cv:focus {
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.3); /* Versión naranja para civil */
+}
+
+/* Si el botón está dentro de un enlace <a> */
+a.cv-btn-view-cv,
+a .cv-btn-view-cv {
+  text-decoration: none;
+}
+
+/* Quitar borde azul de focus en todos los navegadores */
+.cv-btn-view-cv:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.3);
+}

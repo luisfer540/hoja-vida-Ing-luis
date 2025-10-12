@@ -191,7 +191,7 @@ export const CVModal = () => {
               onClick={handleModalClose}
               disabled={isLoading}
             >
-              Cerrar
+              Cerrar+++
             </button>
 
             <button

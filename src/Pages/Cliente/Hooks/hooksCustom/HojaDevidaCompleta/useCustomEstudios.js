@@ -11,7 +11,7 @@ export const useCustomEstudios = () => {
     'Costos y presupuestos para edificaciones': '/certificados/costosEdificaciones.png',
     'Básico en costos y presupuestos': '/certificados/basicocostosypresupuesto.png',
     'Interpretación de planos estructurales': '/certificados/planosEstructurales.png',
-    'Trabajo seguro en alturas': '/certificados/trabajoSeguroEnAlturas.png',
+    'Trabajo seguro en alturas': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299241/trabajoSeguroEnAlturas_tj2cvl.png',
     'Microsoft Project:Aplicacion en la programacion de obras': '/certificados/programacionDeObras.png',
     'Pinturas arquitectónicas': '/certificados/pinturasArquitectonica.png',
     'Mármoles y granitos': '/certificados/marmoles-granitos.png',

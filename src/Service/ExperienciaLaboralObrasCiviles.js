@@ -60,24 +60,74 @@ export const experienciaObrasCiviles = [
     cargo: 'Supervisor de obra',
     fecha: '12/01/2016 - 16/12/2020',
     proyecto: 'Urbanización Ciprés, Robles, Entre Bosques',
-    certificado: '/experiencia/berlin/certificado.png',
+    certificado: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299338/certificado_vire3g.png',
     imagenes: [
-      { src: '/experiencia/berlin/1.jpg', descripcion: 'Revision en informe de novenades para sus respectivas correcciones por parte del contratista.' },
-      { src: '/experiencia/berlin/2.png', descripcion: 'Supervision tecnica porceso constructivo de cimentaciones profundas (pilotes),llenado hoja de vida de pilotes' },
-      { src: '/experiencia/berlin/3.png', descripcion: 'Revision tecnica de acabados de obra, e informe de novenades para sus respectivas correcciones por parte del contratista.' },
-      { src: '/experiencia/berlin/4.png', descripcion: 'Revision tecnica de acabados de obra, e informe de novenades para sus respectivas correcciones por parte del contratista.' },
-      { src: '/experiencia/berlin/5.png', descripcion: 'Revision tecnica de acabados de obra, e informe de novenades para sus respectivas correcciones por parte del contratista.' },
-      { src: '/experiencia/berlin/6.png', descripcion: 'Revision tecnica de acabados de obra para entrega del apto al cliente' },
-      { src: '/experiencia/berlin/7.png', descripcion: 'Localizacion y replanteo de pilotes.' },
-      { src: '/experiencia/berlin/8.jpg', descripcion: 'Revision de la profundidad de los pilotes, revision del acero de los pilotes segun el diseño de planos' },
-      { src: '/experiencia/berlin/9.jpg', descripcion: 'Localizacion y replanteo de los pilotes. Verificar el inicion manual de la perforacion de los pilotes los primeros 30cm de profundidad' },
-      { src: '/experiencia/berlin/10.jpg', descripcion: 'Verificacion colocacion del acero(centrado en la perforacion para garantizar el recubrimiento de las paredes del pilote) y del nivel del acero de los pilotes con respecto a la loza flotante y pedestelaes (incluyendo el doblado de la escuadra del acero )' },
-      { src: '/experiencia/berlin/11.jpg', descripcion: 'Verificar que el personal de la planta de concreto, tenga el diseño del vaciado correspondinete a ejecutarse y sin novedades' },
-      { src: '/experiencia/berlin/12.jpg', descripcion: 'Hacer Pruebas de concreto: prueba de Slump, prueba de cilindros' },
-      { src: '/experiencia/berlin/13.jpg', descripcion: 'Verificar nivel del terminado del vaciado, verificar que el concreto no este contaminado segun el caso para no descapotar, se verifica de nuevo el nivel del acero.' },
-      { src: '/experiencia/berlin/14.jpg', descripcion: 'Supervision de la perforacion del pilote y toma de muestras del estrato del subsuelo segun intruciones por el geotecnista' },
-      { src: '/experiencia/berlin/15.jpg', descripcion: 'Verificacion del retiro de la potasa' },
-      { src: '/experiencia/berlin/17.png', descripcion: 'funciones de excavaciones' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299312/1_rxysen.jpg',
+
+      descripcion: 'Revision en informe de novenades para sus respectivas correcciones por parte del contratista.' },
+      
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299313/2_o5vqd8.png', 
+        
+        descripcion: 'Supervision tecnica porceso constructivo de cimentaciones profundas (pilotes),llenado hoja de vida de pilotes' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299314/3_haujum.png',
+        
+        descripcion: 'Revision tecnica de acabados de obra, e informe de novenades para sus respectivas correcciones por parte del contratista.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299315/4_vthc1l.png',
+        
+        descripcion: 'Revision tecnica de acabados de obra, e informe de novenades para sus respectivas correcciones por parte del contratista.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299316/5_vzryzq.png', 
+        
+        descripcion: 'Revision tecnica de acabados de obra, e informe de novenades para sus respectivas correcciones por parte del contratista.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299317/6_kqoijg.png', 
+        
+        descripcion: 'Revision tecnica de acabados de obra para entrega del apto al cliente' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299319/7_tqtkod.png', 
+        
+        descripcion: 'Localizacion y replanteo de pilotes.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299323/8_dw87ej.jpg',
+        
+        descripcion: 'Revision de la profundidad de los pilotes, revision del acero de los pilotes segun el diseño de planos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299325/9_yb9mxj.jpg', 
+        
+        descripcion: 'Localizacion y replanteo de los pilotes. Verificar el inicion manual de la perforacion de los pilotes los primeros 30cm de profundidad' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299323/10_p9jrls.jpg',
+
+         descripcion: 'Verificacion colocacion del acero(centrado en la perforacion para garantizar el recubrimiento de las paredes del pilote) y del nivel del acero de los pilotes con respecto a la loza flotante y pedestelaes (incluyendo el doblado de la escuadra del acero )' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299334/11_w6rdbn.jpg', 
+
+
+        descripcion: 'Verificar que el personal de la planta de concreto, tenga el diseño del vaciado correspondinete a ejecutarse y sin novedades' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299335/12_bi0rxj.jpg',
+
+         descripcion: 'Hacer Pruebas de concreto: prueba de Slump, prueba de cilindros' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299338/13_tkktee.jpg',
+        
+        descripcion: 'Verificar nivel del terminado del vaciado, verificar que el concreto no este contaminado segun el caso para no descapotar, se verifica de nuevo el nivel del acero.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299337/14_do5aam.jpg',
+        
+        descripcion: 'Supervision de la perforacion del pilote y toma de muestras del estrato del subsuelo segun intruciones por el geotecnista' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299336/15_tnrnpm.jpg',
+        
+        descripcion: 'Verificacion del retiro de la potasa' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299346/17_ws75pe.png', 
+        
+        descripcion: 'funciones de excavaciones' },
+
     ]
   },
   {
@@ -86,9 +136,9 @@ export const experienciaObrasCiviles = [
     cargo: 'Inspector de interventoria ',
     fecha: '3/02/2015 - 28/12/2015',
     proyecto: 'Instalacion de la señalizacion vertical y horizontal en la red vial a cargo del departamento de anioquia',
-    certificado: '/experiencia/Cgr/certificado.png',
+    certificado: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760301351/certificado_ryt9ha.png',
     imagenes: [
-      { src: '/experiencia/Cgr/certificado.png', descripcion: 'Sin registro fotografico, lo sentimos' },
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760301351/certificado_ryt9ha.png', descripcion: 'Sin registro fotografico, lo sentimos' },
 
     ]
   },

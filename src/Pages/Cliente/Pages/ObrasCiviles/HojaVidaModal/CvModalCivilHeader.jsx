@@ -9,6 +9,7 @@ export const CvModalCivilHeader = () => {
       <NavLink 
         to="/cv-completa"
         onClick={handleModalClose}
+        style={{ textDecoration: 'none', color: 'inherit' }}
       >
         <button className="cv-btn-view-cv">
           Ver hoja de vida detallada

@@ -39,32 +39,56 @@ export const experienciaObrasCiviles = [
     cargo: 'Encargado de obra',
     fecha: '4/03/2021 - 13/12/2022',
     proyecto: 'Casa Quinta Q5 Malabar',
-    certificado: '/experiencia/work/certificado.png',
+    certificado: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304856/certificado_rtqp6e.png',
+
     imagenes: [
-      { src: '/experiencia/work/10.jpeg', descripcion: 'Cordinar y supervisar vaceados (cubicacion,pruebas de Slump,Cilindros, Garantizar que no queden particulas de aire en concreto(vibro,chipote), nivel de concreto segun diseño de planos, solucion de imprevistos)' },
-      { src: '/experiencia/work/11.jpeg', descripcion: 'verificacion de pruebas de hermiticidad, Garantizar el adecuado recubrimiento del acero del contrapiso, la adecuada vibracion para eliminar las particulas de aire en el concreto' },
-      { src: '/experiencia/work/12.jpeg', descripcion: 'Verificar los puntos sanitarios e hidraulicos,cajas de inspecion segun el diseño' },
-      { src: '/experiencia/work/13.jpeg', descripcion: 'Se monta plano aquitectonico encima del plano estructural, para verficar que los muros queden apoyados en las vigas de cimentacion y columnas en los pilotes y zapatas. se hacen las correciones y se le pasan al calculista encargado' },
-      { src: '/experiencia/work/14.jpeg', descripcion: 'Cordinar y supervisar movientos de tierras y lipieza de la obra' },
-      { src: '/experiencia/work/15.jpeg', descripcion: 'Cordinar y supervisar lleno con afirmado garantizando una buena compactacion y nivel requerido.' },
-      { src: '/experiencia/work/16.jpeg', descripcion: 'Cordinar y supervisar actividades de excavacion de vigas de cimentacion, garantizando su ancho y profundidad para evitar sobre costos' },
-      { src: '/experiencia/work/17.jpeg', descripcion: 'Toma de deciciones. planos estructurales y arquitectonicos no conciden, cambio de diseño por parte del cliente, se plantea soluciones hacer pilotes nuevos y columnas nuevas que no estan en el diseño a espera de aprobacion del calculista.' },
-      { src: '/experiencia/work/18.jpeg', descripcion: 'verificar acero de pilotes,vigas de cimentacion y columnas, para un vaceado monolitico' },
-      { src: '/experiencia/work/19.jpeg', descripcion: 'verificacion de dobelas para los muros de sobrecimiento' },
-      { src: '/experiencia/work/20.jpeg', descripcion: 'Verificar diametro y profuncidad de pilotes, estrato final del suelo de los pilotes, dejar constancia en bitacora en caso que este socavado para justificar sobre costos' },
-      { src: '/experiencia/work/21.jpeg', descripcion: 'Verificar y garantizar expesores de vigas para evitar sobre costos' },
-      { src: '/experiencia/work/22.jpeg', descripcion: 'Verificar nivel del acero de la losa para garantizar el expesor requerido y el nivel terminado de la losa' },
-      { src: '/experiencia/work/23.jpeg', descripcion: ' Verificar puntos electricos y la adecuada instalacion de la tuberia electrica que no afecte el terminado de la losa vaciada ' },
-      { src: '/experiencia/work/24.jpeg', descripcion: 'Cordinar y supervisar excavaciones  de pilotes' },
-      { src: '/experiencia/work/25.jpeg', descripcion: 'Cordinar y supervisar sustitucion de suelo para montaje de acero en las vigas de cimentacion' },
-      { src: '/experiencia/work/26.jpeg', descripcion: 'Se plantea soluciones con respecto a columnas que no irian ya, por cambio de sieño del cliente, a espera de aprobacion del calculista' },
-      { src: '/experiencia/work/27.jpeg', descripcion: 'Cordinar y supervisar proceso constructivo de muros de sobrecimiento' },
-      { src: '/experiencia/work/28.jpeg', descripcion: 'Dejar constancia de los pilotes que no se puede continuar con excavacion manual y su longitud, para continuar con excavacion mecanica' },
-      { src: '/experiencia/work/29.jpeg', descripcion: 'Cordinar y supervisar que los pilotes sobre excavados queden con el diametro reuquerido pra evitar sobre costos' },
-      { src: '/experiencia/work/30.jpeg', descripcion: 'verificar la correcta instalacion de los canatos de los pilotes, grantizando su longitud, armado,y recubrimiento con las paredes del pilote' },
-      { src: '/experiencia/work/31.jpeg', descripcion: 'reportar accidentes de trabajo al personal SST de turno' },
-      { src: '/experiencia/work/32.jpeg', descripcion: 'Localizar y replantear vigas de cimentacion' },
-      { src: '/experiencia/work/33.png', descripcion: 'Entre otras mas funciones' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304665/10_nyl5jm.jpg', descripcion: 'Cordinar y supervisar vaceados (cubicacion,pruebas de Slump,Cilindros, Garantizar que no queden particulas de aire en concreto(vibro,chipote), nivel de concreto segun diseño de planos, solucion de imprevistos)' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304670/11_iyb2o0.jpg', descripcion: 'verificacion de pruebas de hermiticidad, Garantizar el adecuado recubrimiento del acero del contrapiso, la adecuada vibracion para eliminar las particulas de aire en el concreto' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304669/12_bsmst8.jpg', descripcion: 'Verificar los puntos sanitarios e hidraulicos,cajas de inspecion segun el diseño' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304669/12_bsmst8.jpg', descripcion: 'Se monta plano aquitectonico encima del plano estructural, para verficar que los muros queden apoyados en las vigas de cimentacion y columnas en los pilotes y zapatas. se hacen las correciones y se le pasan al calculista encargado' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304679/14_bichi5.jpg', descripcion: 'Cordinar y supervisar movientos de tierras y lipieza de la obra' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304679/15_dqjpxa.jpg', descripcion: 'Cordinar y supervisar lleno con afirmado garantizando una buena compactacion y nivel requerido.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304756/16_rkzqt3.jpg', descripcion: 'Cordinar y supervisar actividades de excavacion de vigas de cimentacion, garantizando su ancho y profundidad para evitar sobre costos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304757/17_adqfgy.jpg', descripcion: 'Toma de deciciones. planos estructurales y arquitectonicos no conciden, cambio de diseño por parte del cliente, se plantea soluciones hacer pilotes nuevos y columnas nuevas que no estan en el diseño a espera de aprobacion del calculista.' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304761/18_p8zmvu.jpg', descripcion: 'verificar acero de pilotes,vigas de cimentacion y columnas, para un vaceado monolitico' },
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304767/19_gadc2d.jpg', descripcion: 'verificacion de dobelas para los muros de sobrecimiento' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304776/20_bh6v6d.jpg', descripcion: 'Verificar diametro y profuncidad de pilotes, estrato final del suelo de los pilotes, dejar constancia en bitacora en caso que este socavado para justificar sobre costos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304782/21_mvdzcf.jpg', descripcion: 'Verificar y garantizar expesores de vigas para evitar sobre costos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304784/22_azxupa.jpg', descripcion: 'Verificar nivel del acero de la losa para garantizar el expesor requerido y el nivel terminado de la losa' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304796/23_edvzoa.jpg', descripcion: ' Verificar puntos electricos y la adecuada instalacion de la tuberia electrica que no afecte el terminado de la losa vaciada ' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304799/24_uqwmqd.jpg', descripcion: 'Cordinar y supervisar excavaciones  de pilotes' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304800/25_d3bofz.jpg', descripcion: 'Cordinar y supervisar sustitucion de suelo para montaje de acero en las vigas de cimentacion' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304813/26_yfiswm.jpg', descripcion: 'Se plantea soluciones con respecto a columnas que no irian ya, por cambio de sieño del cliente, a espera de aprobacion del calculista' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304819/27_l9rstr.jpg', descripcion: 'Cordinar y supervisar proceso constructivo de muros de sobrecimiento' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304829/28_d43nbm.jpg', descripcion: 'Dejar constancia de los pilotes que no se puede continuar con excavacion manual y su longitud, para continuar con excavacion mecanica' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304833/29_ctrdtn.jpg', descripcion: 'Cordinar y supervisar que los pilotes sobre excavados queden con el diametro reuquerido pra evitar sobre costos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304837/30_pgnqgs.jpg', descripcion: 'verificar la correcta instalacion de los canatos de los pilotes, grantizando su longitud, armado,y recubrimiento con las paredes del pilote' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304840/31_cgmztb.jpg', descripcion: 'reportar accidentes de trabajo al personal SST de turno' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304843/32_sto9qp.jpg', descripcion: 'Localizar y replantear vigas de cimentacion' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304848/33_ic8bau.png', descripcion: 'Entre otras mas funciones' },
 
     ]
   },
@@ -162,19 +186,29 @@ export const experienciaObrasCiviles = [
     cargo: 'Residente de obra ',
     fecha: '5/01/2014 - 2/12/2015',
     proyecto: 'Instalacion de torres de telecomunicaciones a cargo del ministerio vial de telecomunicaciones a nivel Nacional',
-    certificado: '/experiencia/inmag/certificado.png',
+    certificado: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304293/certificado_xhjfkb.png',
     imagenes: [
-      { src: '/experiencia/inmag/1.JPG', descripcion: 'Cordinar y supervisar la correcta instalacion de las vigas IP, garantizando una muy buena nivelacion de ellas' },
-      { src: '/experiencia/inmag/2.JPG', descripcion: 'cordinar y supervisar el pre-armado de la torre, verificar que esten completos los cuerpos de la torre(mutantes),con sus respectivos accesorios' },
-      { src: '/experiencia/inmag/3.JPG', descripcion: 'Cordinar y supervisar la adecuada instalacion de los pedastales para la instacion de los mutantes de la torre' },
-      { src: '/experiencia/inmag/4.JPG', descripcion: 'Verificar la instalacion del tablero electrico con sus respectivo polo a tierra clavada a la longitud indicada en planos' },
-      { src: '/experiencia/inmag/5.JPG', descripcion: 'Cordinar, supervisar , controlar el armado de los mutantes de la torre con sus respectivo refuerzos. e instalacion de la torre grua' },
-      { src: '/experiencia/inmag/6.JPG', descripcion: 'Cordinar y supervisar vaceado de losa para cuartos de maquina' },
-      { src: '/experiencia/inmag/7.JPG', descripcion: 'Cordinar y supervisar armado de columas y vaceado' },
-      { src: '/experiencia/inmag/8.JPG', descripcion: 'Cordinar y supervisar pega de manposteria' },
-      { src: '/experiencia/inmag/9.JPG', descripcion: 'Cordinar y supervisar armado y vaceado de losa para cubierta y su impermeabilizada' },
-      { src: '/experiencia/inmag/10.JPG', descripcion: 'Verificacion de acabado de losa para una correcta impermeabilizada' },
-      { src: '/experiencia/inmag/11.png', descripcion: 'Otras funciones' },
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304258/1_e5sdtk.jpg', descripcion: 'Cordinar y supervisar la correcta instalacion de las vigas IP, garantizando una muy buena nivelacion de ellas' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304261/2_vapxwm.jpg', descripcion: 'cordinar y supervisar el pre-armado de la torre, verificar que esten completos los cuerpos de la torre(mutantes),con sus respectivos accesorios' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304263/3_gfsvo4.jpg', descripcion: 'Cordinar y supervisar la adecuada instalacion de los pedastales para la instacion de los mutantes de la torre' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304265/4_ews4vq.jpg', descripcion: 'Verificar la instalacion del tablero electrico con sus respectivo polo a tierra clavada a la longitud indicada en planos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304267/5_ybqmf4.jpg', descripcion: 'Cordinar, supervisar , controlar el armado de los mutantes de la torre con sus respectivo refuerzos. e instalacion de la torre grua' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304368/6_m5yrcj.jpg', descripcion: 'Cordinar y supervisar vaceado de losa para cuartos de maquina' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304352/7_zch2to.jpg', descripcion: 'Cordinar y supervisar armado de columas y vaceado' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304362/8_q8wm30.jpg', descripcion: 'Cordinar y supervisar pega de manposteria' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304366/9_p8p79o.jpg', descripcion: 'Cordinar y supervisar armado y vaceado de losa para cubierta y su impermeabilizada' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304361/10_qicyd7.jpg', descripcion: 'Verificacion de acabado de losa para una correcta impermeabilizada' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760304290/11_oruhyh.png', descripcion: 'Otras funciones' },
     ]
   },
    {
@@ -183,24 +217,38 @@ export const experienciaObrasCiviles = [
     cargo: 'Inspector de interventoria ',
     fecha: '8/01/2013 - 11/9/2013',
     proyecto: 'Construccion puente Postensado el indio',
-    certificado: '/experiencia/Gng/certificado.png',
+    certificado: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303840/certificado_lmbz0m.png',
     imagenes: [
-      { src: '/experiencia/Gng/1.png', descripcion: 'Instalacion de la esfera metalica para la instalacion de los tirantes del puente' },
-      { src: '/experiencia/Gng/2.png', descripcion: 'Instalacion del gato 300 Kn PAUL: se instala el gato en los torones sostenido por medio de poleas y malacate ' },
-      { src: '/experiencia/Gng/3.png', descripcion: 'Verificar la correcta conexion del gato' },
-      { src: '/experiencia/Gng/4.png', descripcion: 'verificar y garantizar el correcto tensionamiento de las familias de los torones segun diseño de planos' },
-      { src: '/experiencia/Gng/5.png', descripcion: 'Verificar el antes y el después del tesado de las familias de torones, realizando mediciones precisas para garantizar que las tensiones aplicadas cumplieran con los parámetros técnicos exigidos por la normativa vigente.' },
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303747/1_taneah.png', descripcion: 'Instalacion de la esfera metalica para la instalacion de los tirantes del puente' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303755/2_nst9oh.png', descripcion: 'Instalacion del gato 300 Kn PAUL: se instala el gato en los torones sostenido por medio de poleas y malacate ' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303777/3_kcgmue.png', descripcion: 'Verificar la correcta conexion del gato' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303767/4_r0p9y9.png', descripcion: 'verificar y garantizar el correcto tensionamiento de las familias de los torones segun diseño de planos' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303767/5_igp5tu.png', descripcion: 'Verificar el antes y el después del tesado de las familias de torones, realizando mediciones precisas para garantizar que las tensiones aplicadas cumplieran con los parámetros técnicos exigidos por la normativa vigente.' },
+
       
-      { src: '/experiencia/Gng/7.JPG', descripcion: 'supervisar y verificar el armado del acero de la cimentacion del puente y pata elefante' },
-      { src: '/experiencia/Gng/8.JPG', descripcion: 'Verificar y supervision del acceso al puente (terraplen en tierra con diferentes getotextil segun capas y nivel, teniendo en cuenta la cota maxima de inundacion)' },
-      { src: '/experiencia/Gng/9.JPG', descripcion: 'coordinación y supervisión del posicionamiento de vigas riostras, asegurando su instalación conforme a los diseños estructurales y a los parámetros técnicos establecidos. Este proceso se llevó a cabo con base en los resultados de resistencia del concreto obtenidos mediante ensayos de cilindros, realizados en laboratorio.Se verificó que el concreto alcanzara al menos el 50% de la resistencia especificada a los 8 días, como condición mínima para proceder con el montaje de elementos estructurales, garantizando así la seguridad y estabilidad durante las fases constructivas. ' },
-      { src: '/experiencia/Gng/10.JPG', descripcion: 'Supervisión del replanteo geométrico de las partes del puente, garantizando la correcta ubicación de pilas, estribos, vigas y riostras conforme a los planos de diseño. ' },
-      { src: '/experiencia/Gng/11.JPG', descripcion: 'Verificar las condiciones técnicas del acceso al puente mediante control de compactación, humedad y resistencia del terraplén, garantizando su estabilidad y funcionalidad estructural(pruebas Cbr,Revisión de materiales,Inspección visual y topográfica).' },
-      { src: '/experiencia/Gng/12.JPG', descripcion: 'Revisión del inicio del curado inmediatamente después del desencofrado o fraguado inicial, según el tipo de concreto utilizado. ' },
-      { src: '/experiencia/Gng/13.png', descripcion: 'Revision y supervison del armado de las parrillas del puente' },
-      { src: '/experiencia/Gng/14.png', descripcion: 'Verificar y garantizar el armado del acceso al puente segun planos' },
-       { src: '/experiencia/Gng/16.png', descripcion: 'verificar y supervisar el correcto encofrado del borde de la losa del puente' },
-       { src: '/experiencia/Gng/17.png', descripcion: 'verificar y supervisar la correcta instalacion del acero de los vastagos' },
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303812/7_umtjwl.jpg', descripcion: 'supervisar y verificar el armado del acero de la cimentacion del puente y pata elefante' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303807/8_wzgd3e.jpg', descripcion: 'Verificar y supervision del acceso al puente (terraplen en tierra con diferentes getotextil segun capas y nivel, teniendo en cuenta la cota maxima de inundacion)' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303815/9_k4l6bc.jpg', descripcion: 'coordinación y supervisión del posicionamiento de vigas riostras, asegurando su instalación conforme a los diseños estructurales y a los parámetros técnicos establecidos. Este proceso se llevó a cabo con base en los resultados de resistencia del concreto obtenidos mediante ensayos de cilindros, realizados en laboratorio.Se verificó que el concreto alcanzara al menos el 50% de la resistencia especificada a los 8 días, como condición mínima para proceder con el montaje de elementos estructurales, garantizando así la seguridad y estabilidad durante las fases constructivas. ' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303865/10_ndkcmh.jpg', descripcion: 'Supervisión del replanteo geométrico de las partes del puente, garantizando la correcta ubicación de pilas, estribos, vigas y riostras conforme a los planos de diseño. ' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303874/11_t2rvei.jpg', descripcion: 'Verificar las condiciones técnicas del acceso al puente mediante control de compactación, humedad y resistencia del terraplén, garantizando su estabilidad y funcionalidad estructural(pruebas Cbr,Revisión de materiales,Inspección visual y topográfica).' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303869/12_tbmoce.jpg', descripcion: 'Revisión del inicio del curado inmediatamente después del desencofrado o fraguado inicial, según el tipo de concreto utilizado. ' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303826/13_tg7qmv.png', descripcion: 'Revision y supervison del armado de las parrillas del puente' },
+
+      { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303830/14_urx7ng.png', descripcion: 'Verificar y garantizar el armado del acceso al puente segun planos' },
+
+       { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303845/16_fs4wir.png', descripcion: 'verificar y supervisar el correcto encofrado del borde de la losa del puente' },
+
+       { src: 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760303865/17_eziv6m.png', descripcion: 'verificar y supervisar la correcta instalacion del acero de los vastagos' },
        
     ]
   },

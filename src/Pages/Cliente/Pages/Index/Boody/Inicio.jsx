@@ -1,6 +1,7 @@
 import { useInicio } from "../../../Hooks/hooksCustom/Index/Boody/useInicio";
 import styles from "../../../Styles/Index/Boody/Inicio.module.css";
 import { memo } from 'react';
+import { ComoponenteSEO } from "../../ComoponenteSEO";
 
 export const Inicio = memo(() => {
   const { slide, handlePrev, handleNext } = useInicio();
@@ -15,6 +16,13 @@ export const Inicio = memo(() => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <ComoponenteSEO
+                title="Obras Civiles y Desarrolador de software"
+                description="Conocmiento en obras civiles y desarrollo de software."
+                canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
+                image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320799/bannerSeo_r55lod.png"
+                type="website"
+              />
       <section className={styles.inicioContainer}>
         {/* Flecha izquierda */}
         <button

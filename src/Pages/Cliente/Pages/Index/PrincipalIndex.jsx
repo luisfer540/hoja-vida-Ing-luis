@@ -14,7 +14,7 @@ export const PrincipalIndex = () => {
           title="Obras Civiles y Desarrolador de software"
           description="Conocmiento en obras civiles y desarrollo de software."
           canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
-          image="/imgs/bannerSeo.png"
+          image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320799/bannerSeo_r55lod.png"
           type="website"
         />
         <Inicio />

@@ -666,10 +666,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: auto;
+  margin: 16px auto; /* margen superior e inferior */
   display: block;
+  animation: bounceOutSubtle 2.8s infinite ease-in-out;
 }
 
+/* Hover y Active conservados */
 .cv-btn-view-cv:hover {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 10px 30px rgba(0, 255, 76, 0.4);
@@ -679,6 +681,34 @@
   transform: scale(0.98);
   box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
 }
+
+/* Animación sutil tipo “escape” */
+@keyframes bounceOutSubtle {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-4px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+.cv-btn-indicator {
+  font-size: clamp(20px, 4vw, 28px);
+  text-align: center;
+  animation: handBounce 2.8s infinite ease-in-out;
+  margin-top: 4px;
+  user-select: none;
+}
+
+@keyframes handBounce {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-6px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
 
 .civil-content .cv-btn-view-cv {
   background: linear-gradient(135deg, #ff8c00 0%, #cc7000 100%);

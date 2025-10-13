@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export const useTransparentNav = () => {
-  const [logo] = useState("/imgs/fotoperfil.jpg");
+  const [logo] = useState("https://res.cloudinary.com/dkz51cyxl/image/upload/v1760328729/perfil2_gw8pwh.jpg");
   const [logoAlt] = useState("Luis Fernando Agudelo - Perfil profesional");
   const [activeHref, setActiveHref] = useState("#inicio");
 

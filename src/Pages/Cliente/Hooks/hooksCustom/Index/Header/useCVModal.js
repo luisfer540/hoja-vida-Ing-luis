@@ -26,7 +26,7 @@ export const useCVModal = () => {
   civil: {
     type: "civil",
     title: "Tecnólogo en Obras Civiles",
-    subtitle: "Especialista en Construcción e Infraestructura",
+    subtitle: " Construcción e Infraestructura",
   },
   software: {
     type: "software",

@@ -9,6 +9,7 @@ import { DatosPersonales } from './boody/datosPersonales/DatosPersonales';
 import { Estudios } from './boody/estuidosRealizados/Estudios';
 import { ExperienciaLaboral } from './boody/experienciaLaboral/ExperienciaLaboral';
 import { Habilidades } from './boody/habilidades/Habilidades';
+import { ComponenteSEO } from '../../ComponenteSEO';
 
 
 
@@ -26,13 +27,13 @@ export const CvCivilCompletaPrincipal = () => {
 
   return (
     <div className={styles.layout}>
-          <ComponenteSEO
-  title="Obras Civiles y Desarrollador de software"
-  description="Conocimiento en obras civiles y desarrollo de software."
-  canonical="https://hoja-vida-ing-luis-155j.vercel.app/"
-  image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760324797/bannerSeo3_ldpupt.jpg"
-  type="website"
-/>
+  <ComponenteSEO
+          title="Luis Fernando Agudelo | Desarrollador de Software & Auxiliar en Ingeniería Civil"
+          description="Soy Luis Fernando Agudelo, desarrollador de software especializado en React y auxiliar técnico en ingeniería civil. Explora mi hoja de vida, proyectos y experiencia profesional."
+          canonical="https://hoja-vida-ing-luis-155j.vercel.app/"
+          image="https://res.cloudinary.com/dkz51cyxl/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1760324797/bannerSeo3_ldpupt.jpg"
+          type="website"
+        />
  
       <BrraIzquierda />
 

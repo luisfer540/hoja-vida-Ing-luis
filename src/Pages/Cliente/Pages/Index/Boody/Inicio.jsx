@@ -1,7 +1,7 @@
 import { useInicio } from "../../../Hooks/hooksCustom/Index/Boody/useInicio";
 import styles from "../../../Styles/Index/Boody/Inicio.module.css";
 import { memo } from 'react';
-import { ComponenteSEO } from "../../ComponenteSEO";
+
 
 
 export const Inicio = memo(() => {
@@ -17,13 +17,7 @@ export const Inicio = memo(() => {
         backgroundRepeat: "no-repeat",
       }}
     >
- <ComponenteSEO
-  title="Obras Civiles y Desarrollador de software"
-  description="Conocimiento en obras civiles y desarrollo de software."
-  canonical="https://hoja-vida-ing-luis-155j.vercel.app/"
-  image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760324797/bannerSeo3_ldpupt.jpg"
-  type="website"
-/>
+
 
 
       <section className={styles.inicioContainer}>

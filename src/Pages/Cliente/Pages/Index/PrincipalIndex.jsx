@@ -15,7 +15,7 @@ export const PrincipalIndex = () => {
   title="Obras Civiles y Desarrollador de software"
   description="Conocimiento en obras civiles y desarrollo de software."
   canonical="https://hoja-vida-ing-luis-155j.vercel.app/"
-  image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320799/bannerSeo_r55lod.png"
+  image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760324797/bannerSeo3_ldpupt.jpg"
   type="website"
 />
 

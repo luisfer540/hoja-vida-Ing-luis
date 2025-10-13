@@ -29,7 +29,7 @@ export const CvCivilCompletaPrincipal = () => {
           <ComoponenteSEO
                 title="Obras Civiles y Desarrolador de software"
                 description="Conocmiento en obras civiles y desarrollo de software."
-                canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
+                canonical="https://hoja-vida-ing-luis-155j.vercel.app/"
                 image="/imgs/bannerSeo.png"
                 type="website"
               />  

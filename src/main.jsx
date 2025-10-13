@@ -10,7 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { CvModalSoftwareProvider } from './Pages/Cliente/Context/index/Header/CvModalSoftwareProvider.jsx';
 import { ProviderExperienciaLaboral } from './Pages/Cliente/Context/hojaDeVidaCompleta/ProviderModalLaboralCertificateViewer.jsx';
 import { ProviderEstudios } from './Pages/Cliente/Context/hojaDeVidaCompleta/ProviderEstudios.jsx';
-import { HelmetProvider } from 'react-helmet-async';
+
 
 
 
@@ -19,7 +19,7 @@ import { HelmetProvider } from 'react-helmet-async';
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
-      <HelmetProvider>
+      
       <ProviderEstudios>
       <ProviderExperienciaLaboral>
       <CvModalSoftwareProvider>
@@ -29,7 +29,7 @@ createRoot(document.getElementById('root')).render(
       </CvModalSoftwareProvider>
       </ProviderExperienciaLaboral>
       </ProviderEstudios>
-      </HelmetProvider>
+    
     </StrictMode>
   </BrowserRouter>
 

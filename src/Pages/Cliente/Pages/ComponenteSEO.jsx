@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+// src/Pages/Cliente/Pages/ComponenteSEO.jsx
 
 export const ComponenteSEO = ({
   title,
@@ -7,13 +7,10 @@ export const ComponenteSEO = ({
   image,
   type = 'website',
 }) => {
-  //  URL de imagen optimizada con transformaciones de Cloudinary
-  const optimizedImage = image 
-    ? `https://res.cloudinary.com/dkz51cyxl/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1760324797/bannerSeo3_ldpupt.jpg`
-    : null;
+  const optimizedImage = image || 'https://res.cloudinary.com/dkz51cyxl/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1760324797/bannerSeo3_ldpupt.jpg';
 
   return (
-    <Helmet>
+    <>
       {/* SEO básico */}
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
@@ -37,6 +34,6 @@ export const ComponenteSEO = ({
       {title && <meta name="twitter:title" content={title} />}
       {description && <meta name="twitter:description" content={description} />}
       {optimizedImage && <meta name="twitter:image" content={optimizedImage} />}
-    </Helmet>
+    </>
   );
 };

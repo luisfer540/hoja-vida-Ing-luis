@@ -8,7 +8,8 @@ import styles from './Pages/Cliente/Styles/Index/PrincipalIndex.module.css';
 
 import { useModal } from './Pages/Cliente/Context/index/Header/ModalProvider';
 import { ContactoModal } from './Pages/Cliente/Pages/contactame/ContactoModal';
-import { ComoponenteSEO } from './Pages/Cliente/Pages/ComoponenteSEO';
+import { ComponenteSEO } from './Pages/Cliente/Pages/ComponenteSEO';
+
 
 
 function App() {
@@ -16,13 +17,14 @@ const { activeModal, handleModalClose } = useModal()
 
   return (
     <div className={styles.layout}>
-          <ComoponenteSEO
-                title="Obras Civiles y Desarrolador de software"
-                description="Conocmiento en obras civiles y desarrollo de software."
-                canonical="https://www.tusitio.comhttps://hoja-vida-ing-luis-155j.vercel.app/"
-                image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320799/bannerSeo_r55lod.png"
-                type="website"
-              />  
+        <ComponenteSEO
+  title="Obras Civiles y Desarrollador de software"
+  description="Conocimiento en obras civiles y desarrollo de software."
+  canonical="https://hoja-vida-ing-luis-155j.vercel.app/"
+  image="https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320799/bannerSeo_r55lod.png"
+  type="website"
+/>
+
       <Navbar />
       <Routes>
         <Route path="/" element={<PrincipalIndex />} />

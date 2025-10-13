@@ -62,7 +62,7 @@
 
 /* Efecto 3D específico para CIVIL con imagen de fondo */
 .cv-modal-civil {
-  background-image: url("/imgs/fondoObras.png");
+  background-image: url("https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320815/fondoObras_xomgqo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,9 +73,10 @@
   border-color: rgba(255, 140, 0, 0.3);
 }
 
+
 /* Efecto 3D específico para SOFTWARE con imagen de fondo */
 .cv-modal-software {
-  background-image: url("imgs/fondoSoftware.png");
+  background-image: url("https://res.cloudinary.com/dkz51cyxl/image/upload/v1760320816/fondoSoftware_y2rbto.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

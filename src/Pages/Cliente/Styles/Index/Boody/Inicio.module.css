@@ -1,23 +1,68 @@
+
+
+
 /* ============================================
-   CONTENEDOR PRINCIPAL - RESPONSIVO FLUIDO
+   OPTIMIZACIONES DE RENDIMIENTO
+   ============================================ */
+
+/* Usar GPU para animaciones */
+.contenedor3D,
+.efectoVidrio,
+.carruselBtn {
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* Optimizar transiciones */
+.contenedor3D {
+  contain: layout style paint;
+}
+
+.inicioContainer {
+  contain: layout style;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   CONTENEDOR PRINCIPAL - IMAGEN DE FONDO COMPLETA
    ============================================ */
 .inicioContainer {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  min-height: clamp(500px, 70vh, 900px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: background-image 1s ease-in-out;
+  transition: background-image 0.8s ease-in-out;
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-/* === Overlay de contraste === */
+/* === Overlay de contraste mejorado === */
 .inicioContainer::before {
   content: "";
   position: absolute;
@@ -27,36 +72,35 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.65) 100%
   );
   z-index: 1;
 }
 
 /* ============================================
-   EFECTO VIDRIO 3D - ADAPTABLE
+   EFECTO VIDRIO 3D - OPTIMIZADO PARA MÓVILES
    ============================================ */
 .efectoVidrio {
-  background: rgba(255, 255, 255, 0.015);
-  backdrop-filter: blur(clamp(10px, 2vw, 20px)) saturate(180%);
-  -webkit-backdrop-filter: blur(clamp(10px, 2vw, 20px)) saturate(180%);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(clamp(10px, 2vw, 20px)) saturate(160%);
+  -webkit-backdrop-filter: blur(clamp(10px, 2vw, 20px)) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
-    inset 0 0 30px rgba(255, 255, 255, 0.05),
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    0 16px 64px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.08);
-  border-radius: clamp(12px, 2vw, 20px);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    inset 0 0 20px rgba(255, 255, 255, 0.06),
+    0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: clamp(16px, 2.5vw, 24px);
+  transition: all 0.4s ease;
   position: relative;
   transform-style: preserve-3d;
-  perspective: 1000px;
-  transform: translateZ(0) rotateX(2deg) rotateY(-1deg);
+  perspective: 800px;
+  transform: translateZ(0);
   z-index: 2;
   width: 100%;
-  max-width: min(95%, 1200px);
+  max-width: min(90%, 1100px);
   margin: 0 auto;
+  padding: clamp(1.5rem, 3vw, 3rem) clamp(1.2rem, 2.5vw, 2.5rem);
 }
 
 .efectoVidrio::before {
@@ -68,10 +112,10 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.03) 25%,
     rgba(255, 255, 255, 0.001) 50%,
-    rgba(255, 255, 255, 0.06) 100%
+    rgba(255, 255, 255, 0.05) 100%
   );
   border-radius: inherit;
   pointer-events: none;
@@ -84,10 +128,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40%;
+  height: 50%;
   background: linear-gradient(
     to top, 
-    rgba(255, 255, 255, 0.06), 
+    rgba(255, 255, 255, 0.08), 
     rgba(255, 255, 255, 0.001)
   );
   pointer-events: none;
@@ -96,18 +140,16 @@
 }
 
 .efectoVidrio:hover {
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow: 
-    inset 0 0 50px rgba(255, 255, 255, 0.08),
-    0 20px 60px rgba(0, 0, 0, 0.3),
-    0 40px 120px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(255, 255, 255, 0.15);
-  transform: translateY(-8px) translateZ(20px) rotateX(5deg) rotateY(-2deg) scale(1.02);
+    inset 0 0 30px rgba(255, 255, 255, 0.08),
+    0 12px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px) translateZ(10px) scale(1.01);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contenedor3D {
-  perspective: 1200px;
+  perspective: 1500px;
   perspective-origin: center center;
   transform-style: preserve-3d;
   width: 100%;
@@ -115,25 +157,25 @@
 
 @keyframes flotante3D {
   0%, 100% {
-    transform: translateY(0) translateZ(0) rotateX(2deg) rotateY(-1deg);
+    transform: translateY(0) translateZ(0) rotateX(0.5deg) rotateY(-0.3deg);
   }
   50% {
-    transform: translateY(-3px) translateZ(5px) rotateX(3deg) rotateY(-1.5deg);
+    transform: translateY(-6px) translateZ(10px) rotateX(1deg) rotateY(-0.6deg);
   }
 }
 
 .efectoVidrio.animado {
-  animation: flotante3D 4s ease-in-out infinite;
+  animation: flotante3D 6s ease-in-out infinite;
 }
 
 /* ============================================
-   OVERLAY Y CONTENIDO - FLUIDO
+   OVERLAY Y CONTENIDO
    ============================================ */
 .overlay {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1rem, 2.5vw, 2rem);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -144,25 +186,24 @@
 
 .heroContent {
   text-align: center;
-  max-width: min(90%, 800px);
-  padding: clamp(1rem, 2vw, 1.5rem);
+  max-width: 100%;
   z-index: 5;
   pointer-events: auto;
   width: 100%;
 }
 
 /* ============================================
-   TIPOGRAFÍA RESPONSIVA CON CLAMP
+   TIPOGRAFÍA RESPONSIVA MEJORADA
    ============================================ */
 .tituloPrincipal {
   font-size: clamp(1.75rem, 4vw + 0.5rem, 3.5rem);
   font-weight: 800;
-  margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
+  margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
   color: #ffffff;
   text-shadow: 
-    2px 2px 8px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(0, 0, 0, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.4);
+    2px 2px 12px rgba(0, 0, 0, 0.95),
+    0 0 30px rgba(0, 0, 0, 0.8),
+    0 0 60px rgba(0, 0, 0, 0.6);
   line-height: 1.2;
   letter-spacing: -0.02em;
   word-wrap: break-word;
@@ -173,12 +214,12 @@
   font-size: clamp(1.1rem, 2.5vw + 0.3rem, 1.8rem);
   font-weight: 600;
   color: #00d4ff;
-  margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   text-shadow: 
-    1px 1px 6px rgba(0, 0, 0, 0.9),
-    0 0 15px rgba(0, 0, 0, 0.7),
-    0 0 30px rgba(0, 212, 255, 0.3);
-  line-height: 1.3;
+    2px 2px 10px rgba(0, 0, 0, 0.95),
+    0 0 25px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(0, 212, 255, 0.5);
+  line-height: 1.4;
   letter-spacing: 0.01em;
   word-wrap: break-word;
 }
@@ -188,10 +229,10 @@
   font-weight: 400;
   color: #f0f8ff;
   line-height: 1.7;
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: 0;
   text-shadow: 
-    1px 1px 4px rgba(0, 0, 0, 0.8),
-    0 0 12px rgba(0, 0, 0, 0.6);
+    1px 1px 8px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.8);
   letter-spacing: 0.02em;
   max-width: min(100%, 700px);
   margin-left: auto;
@@ -201,189 +242,152 @@
 }
 
 /* ============================================
-   BOTONES RESPONSIVOS
-   ============================================ */
-.botones {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(0.8rem, 2vw, 1.2rem);
-  width: 100%;
-}
-
-.btn {
-  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-  color: #000;
-  padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 3vw, 2rem);
-  border-radius: clamp(6px, 1vw, 8px);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  min-width: clamp(140px, 25vw, 180px);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 
-    0 4px 15px rgba(0, 212, 255, 0.4),
-    0 2px 8px rgba(0, 0, 0, 0.3);
-  border: none;
-  cursor: pointer;
-}
-
-.btnSecundario {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 2px solid #00d4ff;
-  color: #ffffff;
-  box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.btn:hover {
-  background: linear-gradient(135deg, #00b8e6 0%, #0088bb 100%);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 
-    0 8px 25px rgba(0, 212, 255, 0.6),
-    0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.btnSecundario:hover {
-  background: rgba(0, 212, 255, 0.2);
-  color: #00d4ff;
-  border-color: #ffffff;
-  box-shadow: 
-    0 8px 25px rgba(255, 255, 255, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.btnElectrico {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  color: #ffffff;
-  padding: clamp(0.7rem, 1.5vw, 0.9rem) clamp(1.5rem, 3vw, 2rem);
-  border-radius: clamp(6px, 1vw, 8px);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
-  transition: all 0.3s ease;
-  min-width: clamp(140px, 25vw, 180px);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: block;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
-}
-
-.btnElectrico:hover {
-  background: rgba(0, 212, 255, 0.1);
-  color: #00d4ff;
-  text-shadow: 0 0 15px rgba(0, 212, 255, 1);
-  transform: scale(1.02);
-}
-
-/* ============================================
-   FLECHAS CARRUSEL - ADAPTABLES
+   FLECHAS CARRUSEL - OPTIMIZADAS
    ============================================ */
 .carruselBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: #00d4ff;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(0, 212, 255, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(0, 212, 255, 0.8);
   border-radius: 50%;
-  width: clamp(40px, 7vw, 60px);
-  height: clamp(40px, 7vw, 60px);
+  width: clamp(50px, 10vw, 75px);
+  height: clamp(50px, 10vw, 75px);
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  text-shadow: 0 0 20px rgba(0, 212, 255, 1);
   padding: 0;
   line-height: 1;
+  font-weight: 300;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .carruselBtn:hover {
-  background: rgba(0, 212, 255, 0.2);
+  background: rgba(0, 212, 255, 0.35);
   border-color: #ffffff;
   color: #ffffff;
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.15);
   box-shadow: 
-    0 0 20px rgba(0, 212, 255, 0.8),
-    0 0 40px rgba(0, 212, 255, 0.4);
+    0 0 30px rgba(0, 212, 255, 1),
+    0 0 60px rgba(0, 212, 255, 0.6);
+}
+
+.carruselBtn:active {
+  transform: translateY(-50%) scale(1.05);
 }
 
 .leftBtn {
-  left: clamp(0.5rem, 2vw, 2rem);
+  left: clamp(0.5rem, 2vw, 3rem);
 }
 
 .rightBtn {
-  right: clamp(0.5rem, 2vw, 2rem);
+  right: clamp(0.5rem, 2vw, 3rem);
 }
 
 /* ============================================
-   MEDIA QUERIES - AJUSTES ESPECÍFICOS
+   MEDIA QUERIES - MÓVILES
    ============================================ */
 
 /* Móviles pequeños (320px - 480px) */
 @media (max-width: 480px) {
   .inicioContainer {
-    min-height: clamp(450px, 60vh, 600px);
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height */
+    background-position: center center;
   }
   
   .overlay {
     padding: 1rem 0.5rem;
   }
   
-  .heroContent {
-    padding: 0.75rem;
-  }
-  
-  .botones {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 1rem;
-  }
-  
-  .btn,
-  .btnElectrico {
-    width: 100%;
-    max-width: 280px;
-  }
-  
-  .efectoVidrio:hover {
-    transform: translateY(-4px) translateZ(10px) scale(1.01);
+  .efectoVidrio {
+    padding: 1.5rem 1rem;
+    max-width: 92%;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   
   .efectoVidrio.animado {
-    animation: none; /* Desactivar animación en móviles pequeños */
+    animation: none; /* Desactivar animación en móviles */
+  }
+  
+  .efectoVidrio:hover {
+    transform: none; /* Desactivar hover en móviles */
+  }
+  
+  .carruselBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+    border-width: 2px;
+  }
+  
+  .leftBtn {
+    left: 0.5rem;
+  }
+  
+  .rightBtn {
+    right: 0.5rem;
+  }
+  
+  .tituloPrincipal {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .subtitulo {
+    font-size: clamp(1rem, 4.5vw, 1.3rem);
+  }
+  
+  .descripcion {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    line-height: 1.6;
   }
 }
 
 /* Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .inicioContainer {
-    min-height: clamp(500px, 65vh, 700px);
+    min-height: 100vh;
   }
   
   .overlay {
     padding: 1.5rem 1rem;
   }
   
-  .botones {
-    gap: 1rem;
+  .efectoVidrio {
+    max-width: 88%;
+    padding: 2rem 1.5rem;
+  }
+  
+  .carruselBtn {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .leftBtn {
+    left: 1rem;
+  }
+  
+  .rightBtn {
+    right: 1rem;
   }
 }
 
-/* Tablets grandes y laptops pequeñas (769px - 1024px) */
+/* Tablets grandes (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .inicioContainer {
+    min-height: 90vh;
+  }
+  
   .overlay {
     padding: 2rem 1.5rem;
   }
@@ -397,8 +401,12 @@
   }
 }
 
-/* Pantallas grandes (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
+/* Laptops y escritorio (1025px+) */
+@media (min-width: 1025px) {
+  .inicioContainer {
+    min-height: 85vh;
+  }
+  
   .leftBtn {
     left: 2.5rem;
   }
@@ -408,34 +416,15 @@
   }
 }
 
-/* Pantallas extra grandes (1441px - 1920px) */
-@media (min-width: 1441px) and (max-width: 1920px) {
+/* Pantallas grandes (1441px+) */
+@media (min-width: 1441px) {
   .inicioContainer {
-    min-height: 75vh;
-  }
-  
-  .leftBtn {
-    left: 3rem;
-  }
-  
-  .rightBtn {
-    right: 3rem;
-  }
-}
-
-/* Pantallas 2K y 4K (1921px+) */
-@media (min-width: 1921px) {
-  .inicioContainer {
-    min-height: 80vh;
+    min-height: 90vh;
     max-height: 1200px;
   }
   
   .overlay {
     max-width: 1400px;
-  }
-  
-  .heroContent {
-    max-width: 1000px;
   }
   
   .leftBtn {
@@ -445,52 +434,42 @@
   .rightBtn {
     right: 4rem;
   }
-  
-  .carruselBtn {
-    width: 70px;
-    height: 70px;
-    font-size: 3.2rem;
-  }
 }
 
 /* Orientación horizontal en móviles */
-@media (max-height: 500px) and (orientation: landscape) {
+@media (max-height: 600px) and (orientation: landscape) {
   .inicioContainer {
-    min-height: 90vh;
+    min-height: 100vh;
   }
   
   .overlay {
-    padding: 1rem;
+    padding: 0.8rem 0.5rem;
   }
   
-  .heroContent {
-    padding: 0.5rem;
+  .efectoVidrio {
+    padding: 1rem 1.5rem;
+    max-width: 95%;
   }
   
   .tituloPrincipal {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     margin-bottom: 0.5rem;
   }
   
   .subtitulo {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
     margin-bottom: 0.5rem;
   }
   
   .descripcion {
-    font-size: clamp(0.85rem, 1.5vw, 1rem);
-    margin-bottom: 1rem;
-  }
-  
-  .botones {
-    flex-direction: row;
-    gap: 0.8rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    line-height: 1.5;
   }
   
   .carruselBtn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
   }
 }
 
@@ -501,10 +480,12 @@
   }
   
   .efectoVidrio,
-  .btn,
-  .btnElectrico,
   .carruselBtn {
     transition: none;
+  }
+  
+  .inicioContainer {
+    transition: background-image 0.3s ease;
   }
 }
 
@@ -514,15 +495,29 @@
   .subtitulo,
   .descripcion {
     text-shadow: 
-      2px 2px 4px rgba(0, 0, 0, 1),
-      0 0 8px rgba(0, 0, 0, 0.9);
+      3px 3px 8px rgba(0, 0, 0, 1),
+      0 0 15px rgba(0, 0, 0, 1);
   }
   
   .efectoVidrio {
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .carruselBtn {
+    border: 3px solid rgba(0, 212, 255, 1);
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .inicioContainer::before {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
 }
-
 
 
 

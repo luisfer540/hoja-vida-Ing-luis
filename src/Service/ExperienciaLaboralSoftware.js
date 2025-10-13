@@ -1,6 +1,6 @@
 export const ServiceExperienciaLaboralSoftware = [
   {
-    empresa: 'G-vial',
+    empresa: 'Dypsion International',
     url: 'https://www.miMayordomo.com',
     cargo: 'Desarrollador de Software ',
     fecha: '5/05/2025 - 06/11/2025',

@@ -199,6 +199,19 @@
   flex-shrink: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .cv-modal-btn-secondary,
 .cv-modal-btn-primary {
   padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 24px);
@@ -231,19 +244,87 @@
   box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 }
 
+
 .cv-modal-civil .cv-modal-btn-primary {
-  background: linear-gradient(135deg, #ff8c00 0%, #cc7000 100%);
-  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+   background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  backdrop-filter: blur(15px) saturate(200%);
+  -webkit-backdrop-filter: blur(15px) saturate(200%);
+  color: #ffffff; /* BLANCO PURO para máxima visibilidad */
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(0, 0, 0, 1); /* triple sombra para texto ultra visible */
+  font-weight: 700;
+  font-size: clamp(14px, 3vw, 16px);
+  padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 28px);
+  border-radius: clamp(10px, 2vw, 14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3); /* borde más visible */
+  cursor: pointer;
+  box-shadow: 
+    0 2px 12px rgba(214, 129, 2, 0.425),
+    0 0 30px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  animation: bounceOutSubtle 2.8s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
+
+
 
 .cv-modal-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
 }
 
+
+
 .cv-modal-civil .cv-modal-btn-primary:hover {
   box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Content Styles */
 .cv-content {
@@ -652,37 +733,95 @@
   }
 }
 
-/* Botón especial para ver CV */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Botón especial para ver CV - Efecto Vidrio */
+/* Botón especial para ver CV - Efecto Vidrio VISIBLE */
 .cv-btn-view-cv {
-  background: linear-gradient(135deg, #c04e02 0%, #ccc900 100%);
-  color: #000;
-  font-weight: 600;
+    background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  backdrop-filter: blur(15px) saturate(200%);
+  -webkit-backdrop-filter: blur(15px) saturate(200%);
+  color: #ffffff; /* BLANCO PURO para máxima visibilidad */
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(0, 0, 0, 1); /* triple sombra para texto ultra visible */
+  font-weight: 700;
   font-size: clamp(14px, 3vw, 16px);
   padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 28px);
   border-radius: clamp(10px, 2vw, 14px);
-  border: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3); /* borde más visible */
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(165, 184, 2, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    0 2px 12px rgba(0, 255, 76, 0.25),
+    0 0 30px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 16px auto; /* margen superior e inferior */
+  letter-spacing: 1.5px;
+  margin: 16px auto;
   display: block;
   animation: bounceOutSubtle 2.8s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover y Active conservados */
+
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* HOVER - Efecto más intenso */
 .cv-btn-view-cv:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(0, 255, 76, 0.4);
+  background: rgba(255, 255, 255, 0.15); /* MÁS opaco en hover */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 15px 50px rgba(0, 255, 76, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  text-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.7),
+    0 0 15px rgba(0, 255, 76, 0.5);
 }
 
-.cv-btn-view-cv:active {
-  transform: scale(0.98);
-  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
-}
 
-/* Animación sutil tipo “escape” */
+
 @keyframes bounceOutSubtle {
   0%   { transform: translateY(0); }
   25%  { transform: translateY(-4px); }
@@ -691,6 +830,141 @@
   100% { transform: translateY(0); }
 }
 
+.cv-btn-indicator {
+  font-size: clamp(20px, 4vw, 28px);
+  text-align: center;
+  animation: handBounce 2.8s infinite ease-in-out;
+  margin-top: 4px;
+  user-select: none;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8))
+          drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+}
+
+@keyframes handBounce {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-6px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+/* Versión CIVIL - Visible con efecto naranja */
+.civil-content .cv-btn-view-cv {
+    background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  border: 1.5px solid rgba(255, 140, 0, 0.3);
+  color: #ffffff; /* BLANCO PURO */
+  box-shadow: 
+    0 2px 10px rgba(255, 140, 0, 0.3),
+    0 0 30px rgba(255, 140, 0, 0.15),
+    inset 0 1px 0 rgba(255, 140, 0, 0.25);
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(255, 140, 0, 0.5),
+    0 1px 3px rgba(0, 0, 0, 1);
+}
+
+.civil-content .cv-btn-view-cv:hover {
+  background: rgba(255, 140, 0, 0.15); /* más intenso en hover */
+  box-shadow: 
+    0 5px 10px rgba(255, 140, 0, 0.5),
+    0 0 40px rgba(255, 140, 0, 0.25),
+    inset 0 1px 0 rgba(255, 140, 0, 0.35);
+  border: 1.5px solid rgba(255, 140, 0, 0.5);
+  text-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(255, 140, 0, 0.7),
+    0 0 15px rgba(255, 140, 0, 0.6);
+}
+
+/* Efecto shimmer naranja para civil */
+.civil-content .cv-btn-view-cv::before {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 140, 0, 0.15) 50%,
+    transparent 70%
+  );
+}
+
+/* Quitar outline y mantener accesibilidad */
+.cv-btn-view-cv {
+  text-decoration: none;
+  outline: none;
+}
+
+.cv-btn-view-cv:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(0, 212, 255, 0.3),
+    0 12px 40px rgba(0, 255, 76, 0.25),
+    0 0 30px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.civil-content .cv-btn-view-cv:focus {
+  box-shadow: 
+    0 0 0 3px rgba(255, 140, 0, 0.3),
+    0 12px 40px rgba(255, 140, 0, 0.3),
+    0 0 30px rgba(255, 140, 0, 0.15),
+    inset 0 1px 0 rgba(255, 140, 0, 0.25);
+}
+
+.cv-btn-view-cv:focus-visible {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(0, 212, 255, 0.4),
+    0 15px 50px rgba(0, 212, 255, 0.3);
+}
+
+/* Si está dentro de un enlace */
+a.cv-btn-view-cv,
+a .cv-btn-view-cv {
+  text-decoration: none;
+}
+
+/* Responsive - mantener visibilidad en móviles */
+@media (max-width: 768px) {
+  .cv-btn-view-cv {
+    background: rgba(255, 255, 255, 0.1); /* ligeramente más visible en móvil */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    color: #ffffff;
+    text-shadow: 
+      0 2px 10px rgba(0, 0, 0, 0.9),
+      0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  
+  .cv-btn-view-cv:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .civil-content .cv-btn-view-cv {
+    background: rgba(255, 140, 0, 0.1);
+  }
+}
+
+/* Modo oscuro - mantener visibilidad */
+@media (prefers-color-scheme: dark) {
+  .cv-btn-view-cv {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+}
+
+/* Reducir animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  .cv-btn-view-cv,
+  .cv-btn-view-cv::before,
+  .cv-btn-indicator {
+    animation: none;
+  }
+}
 
 
 .cv-btn-indicator {
@@ -699,6 +973,8 @@
   animation: handBounce 2.8s infinite ease-in-out;
   margin-top: 4px;
   user-select: none;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* sombra al emoji */
+  
 }
 
 @keyframes handBounce {
@@ -710,15 +986,56 @@
 }
 
 
-.civil-content .cv-btn-view-cv {
-  background: linear-gradient(135deg, #ff8c00 0%, #cc7000 100%);
-  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
-  color: #000;
-}
 
-.civil-content .cv-btn-view-cv:hover {
-  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Landscape móviles */
 @media (max-height: 500px) and (orientation: landscape) {

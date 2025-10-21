@@ -9,7 +9,7 @@ export const DatosPersonales = () => {
         <li><strong>Lugar y fecha de nacimiento:</strong> Acacías (Meta), 17/02/1989</li>
         <li><strong>Documento de identidad:</strong> 1.112.123.703</li>
         <li><strong>Matrícula profesional:</strong> Copnia</li>
-        <li><strong>Ciudad de residencia:</strong> Medellín (Antioquia)</li>
+        <li><strong>Ciudad de residencia:</strong> Bogota (cundinamarca)</li>
         <li><strong>Teléfono:</strong> 304-2494772</li>
         <li><strong>Email:</strong> luisfer540@gmail.com</li>
       </ul>

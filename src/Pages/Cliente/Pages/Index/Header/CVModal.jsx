@@ -1,7 +1,6 @@
 // Importa los estilos CSS específicos para el componente CVModal
 import "../../../Styles/Index/Header/CvModal/CVModal.css";
 
-
 // Importa el hook personalizado que gestiona la lógica del modal de CV
 import { useCVModal } from "../../../Hooks/hooksCustom/Index/Header/useCVModal";
 
@@ -12,6 +11,7 @@ import html2pdf from "html2pdf.js";
 import { useState } from "react";
 import { CvATSContentObrasCiviles } from "../../ObrasCiviles/AtsHojaVida/CvATSContentObrasCiviles";
 import { CvATSContentSoftware } from "../../Software/AtsHojaVida/CvATSContentSoftware";
+import { BtnVerGuiasTenicas } from "../../Software/GuiasTecnicas/ButtomVerGuiasTecnicas.jsx/BtnVerGuiasTenicas";
 
 // Define y exporta el componente funcional CVModal
 export const CVModal = () => {
@@ -27,7 +27,8 @@ export const CVModal = () => {
     handleBackdropClick, // Función que maneja clics en el fondo para cerrar el modal
     type, // Tipo de contenido que se mostrará en el modal
     title, // Título del modal
-    subtitle, // Subtítulo del modal
+    subtitle, // Subtítulo del modal,
+    showGuiasButton,
     getContentComponent, // Función que devuelve el componente de contenido dinámico
   } = useCVModal();
 
@@ -79,15 +80,16 @@ export const CVModal = () => {
   // Función para manejar la descarga del CV
   const handleDownloadCV = () => {
     const activeProfile = getActiveProfile();
-    
+
     setShowExportContent(true);
     setIsLoading(true);
 
     setTimeout(() => {
       // Busca el elemento específico del perfil activo
-      const element = document.getElementById(`cv-ats-content-${activeProfile}`) 
-        || document.getElementById("cv-ats-content");
-      
+      const element =
+        document.getElementById(`cv-ats-content-${activeProfile}`) ||
+        document.getElementById("cv-ats-content");
+
       if (!element) {
         console.error("No se encontró el elemento para exportar");
         setShowExportContent(false);
@@ -99,10 +101,10 @@ export const CVModal = () => {
         margin: 0.5,
         filename: getFilenameByProfile(activeProfile),
         image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { 
+        html2canvas: {
           scale: 2,
           useCORS: true, // Para imágenes externas
-          logging: false // Desactiva logs en consola
+          logging: false, // Desactiva logs en consola
         },
         jsPDF: {
           unit: "in",
@@ -158,6 +160,13 @@ export const CVModal = () => {
               </h2>
               {/* Subtítulo del modal */}
               <p className="cv-modal-subtitle">{subtitle}</p>
+              {/* Botón para ver guías técnicas solo si está activo el perfil software */}
+              {showGuiasButton && (
+                <div className="cv-modal-guias-button">
+                 <BtnVerGuiasTenicas onClose={handleModalClose} />
+
+                </div>
+              )}
             </div>
 
             {/* Botón para cerrar el modal */}

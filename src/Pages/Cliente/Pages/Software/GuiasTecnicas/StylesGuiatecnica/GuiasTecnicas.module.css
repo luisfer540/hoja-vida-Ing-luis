@@ -1,0 +1,162 @@
+.section {
+  padding: 4rem 1rem;
+  color: #f0f0f0;
+  margin-top: 6%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+     backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.05);
+
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00c3ff; /* azul brillante tipo neón */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  text-shadow:
+    0 0 4px #00c3ff,   /* resplandor suave */
+    0 0 8px #0099cc,   /* halo más profundo */
+    1px 1px 2px rgba(0, 0, 0, 0.6); /* sombra base para contraste */
+  letter-spacing: 0.5px;
+ 
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #ffffff; /* blanco puro para contraste */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  text-shadow:
+    0 0 3px #ffffff,   /* resplandor blanco */
+    1px 1px 2px rgba(0, 0, 0, 0.4); /* sombra base */
+  line-height: 1.5;
+}
+
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* ajustado al nuevo ancho */
+  gap: 0.1rem; /* separación más compacta entre tarjetas */
+  justify-content: center; /* centra las tarjetas si hay espacio sobrante */
+ 
+}
+
+
+
+
+.button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0097a7;
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  width: 260px; /* Menos ancha */
+  height: 380px; /* Más alta */
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+.card:nth-child(n + 3) {
+  margin-top: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardHeader {
+  flex: 1.4; /* Más espacio para la imagen */
+  padding: 0;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* o 'cover' si prefieres que se recorte */
+  border-radius: 0;
+}
+
+.cardBody {
+  flex: 1;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.cardText {
+  font-size: 0.95rem;
+  color: #dddddd;
+  line-height: 1.3;
+  backdrop-filter: blur(2px);
+}
+
+.cardFooter {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  
+}

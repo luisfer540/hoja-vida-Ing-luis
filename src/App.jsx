@@ -7,6 +7,9 @@ import { Navbar } from './Pages/Cliente/Pages/Index/Header/Navbar';
 import styles from './Pages/Cliente/Styles/Index/PrincipalIndex.module.css';
 import { useModal } from './Pages/Cliente/Context/index/Header/ModalProvider';
 import { ContactoModal } from './Pages/Cliente/Pages/contactame/ContactoModal';
+import { GuiasTecnicas } from './Pages/Cliente/Pages/Software/GuiasTecnicas/GuiasTenicas';
+
+
 
 
 
@@ -18,9 +21,11 @@ function App() {
      
 
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<PrincipalIndex />} />
         <Route path="/cv-completa" element={<CvCivilCompletaPrincipal />} />
+         <Route path="/guias-tecnicas" element={<GuiasTecnicas />} />
       </Routes>
     
       {activeModal === "contacto" && (

@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { useModal } from '../../../../Context/index/Header/ModalProvider';
 import { CVModalCivilPrincipal } from '../../../../Pages/ObrasCiviles/HojaVidaModal/CVModalCivilPrincipal';
 import { CvModalSoftwarePrincipal } from '../../../../Pages/Software/HojaVidaModal/CvModalSoftwarePrincipal';
+import { BtnVerGuiasTenicas } from '../../../../Pages/Software/GuiasTecnicas/ButtomVerGuiasTecnicas.jsx/BtnVerGuiasTenicas';
 
 
 
@@ -27,15 +28,17 @@ export const useCVModal = () => {
     type: "civil",
     title: "Tecnólogo en Obras Civiles",
     subtitle: " Construcción e Infraestructura",
+    showGuiasButton: false
   },
   software: {
     type: "software",
     title: "Desarrollador de Software",
     subtitle: "Full Stack Developer & Tech Innovator",
+    showGuiasButton: true
   },
 };
 
-const { type, title, subtitle } = modalConfig[activeModal] || {};
+const { type, title, subtitle,showGuiasButton  } = modalConfig[activeModal] || {};
 
 
 
@@ -188,7 +191,8 @@ const getContentComponent = () => {
       type,
       title,
       subtitle,
-      getContentComponent
+      getContentComponent,
+      showGuiasButton
 
   };
 };

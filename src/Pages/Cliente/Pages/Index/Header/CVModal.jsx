@@ -27,9 +27,10 @@ export const CVModal = () => {
     handleBackdropClick, // Función que maneja clics en el fondo para cerrar el modal
     type, // Tipo de contenido que se mostrará en el modal
     title, // Título del modal
-    subtitle, // Subtítulo del modal,
+    subtitle, // Subtítulo del modal
     showGuiasButton,
     getContentComponent, // Función que devuelve el componente de contenido dinámico
+    activeModal, // Añadido para acceder al modal activo
   } = useCVModal();
 
   // Obtiene el componente de contenido dinámico que se mostrará dentro del modal
@@ -43,22 +44,26 @@ export const CVModal = () => {
 
   // Función para determinar qué perfil está activo
   const getActiveProfile = () => {
-    // Puedes usar el 'type' del hook o cualquier otra lógica para determinar el perfil
-    // Asumiendo que 'type' contiene información del perfil activo
-    return type; // Ejemplo: 'obrasCiviles' o 'software'
+    // Normaliza el valor del activeModal
+    if (activeModal === 'civil') {
+      return 'obrasCiviles';
+    }
+    if (activeModal === 'software') {
+      return 'software';
+    }
+    return activeModal;
   };
 
   // Función para obtener el componente de CV según el perfil
   const getCVComponentByProfile = (profile) => {
     switch (profile) {
       case "obrasCiviles":
-      case "obras-civiles":
+      case "civil":
         return <CvATSContentObrasCiviles />;
       case "software":
       case "desarrollo":
         return <CvATSContentSoftware />;
       default:
-        // Por defecto, puedes retornar el primero o mostrar un mensaje
         return <CvATSContentSoftware />;
     }
   };
@@ -67,7 +72,7 @@ export const CVModal = () => {
   const getFilenameByProfile = (profile) => {
     switch (profile) {
       case "obrasCiviles":
-      case "obras-civiles":
+      case "civil":
         return "LuisFernandoAgudelo_CV_ObrasCiviles.pdf";
       case "software":
       case "desarrollo":
@@ -80,18 +85,19 @@ export const CVModal = () => {
   // Función para manejar la descarga del CV
   const handleDownloadCV = () => {
     const activeProfile = getActiveProfile();
+    
+    console.log('Active Modal:', activeModal); // Para debug
+    console.log('Active Profile:', activeProfile); // Para debug
 
     setShowExportContent(true);
     setIsLoading(true);
 
     setTimeout(() => {
       // Busca el elemento específico del perfil activo
-      const element =
-        document.getElementById(`cv-ats-content-${activeProfile}`) ||
-        document.getElementById("cv-ats-content");
+      const element = document.getElementById(`cv-ats-content-${activeProfile}`);
 
       if (!element) {
-        console.error("No se encontró el elemento para exportar");
+        console.error(`No se encontró el elemento: cv-ats-content-${activeProfile}`);
         setShowExportContent(false);
         setIsLoading(false);
         return;
@@ -163,8 +169,7 @@ export const CVModal = () => {
               {/* Botón para ver guías técnicas solo si está activo el perfil software */}
               {showGuiasButton && (
                 <div className="cv-modal-guias-button">
-                 <BtnVerGuiasTenicas onClose={handleModalClose} />
-
+                  <BtnVerGuiasTenicas onClose={handleModalClose} />
                 </div>
               )}
             </div>
@@ -189,7 +194,9 @@ export const CVModal = () => {
           {/* Contenido temporal para exportar - Solo el perfil activo */}
           {showExportContent && (
             <div style={{ position: "absolute", left: "-9999px", top: 0 }}>
-              {getCVComponentByProfile(getActiveProfile())}
+              <div id={`cv-ats-content-${getActiveProfile()}`}>
+                {getCVComponentByProfile(getActiveProfile())}
+              </div>
             </div>
           )}
 

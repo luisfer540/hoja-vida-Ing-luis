@@ -15,6 +15,7 @@ export const CvModalSoftwareBoody = () => {
               <span className="cv-tech-item">Hooks personalizados</span>
               <span className="cv-tech-item">CSS Modules</span>
               <span className="cv-tech-item">Vite</span>
+              <span className="cv-tech-item">Redux Toolkit</span>
               <span className="cv-tech-item">Formik + Yup</span>
               <span className="cv-tech-item">SweetAlert2</span>
               <span className="cv-tech-item">PDFMake / XLSX</span>

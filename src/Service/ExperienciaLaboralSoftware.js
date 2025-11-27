@@ -47,5 +47,21 @@ export const ServiceExperienciaLaboralSoftware = [
         tipo: 'imagen'
       }
     ]
+  },
+  {
+    empresa: 'Dypsion International',
+    url: 'https://dypsion.com/rehoboth/',
+    cargo: 'Desarrollador de Software ',
+    fecha: '5/05/2025 - 06/11/2025',
+    proyecto: 'Landing Page Corporativa -Rehoboth',
+    certificado: '/experiencia/dypsion/RehobottConstacia.pdf',
+    imagenes: [
+      {
+        src: 'https://www.youtube.com/embed/puR43hufwEA',
+        descripcion: 'Landing Page Corporativa -Rehoboth',
+        tipo: 'video'
+      },
+     
+    ]
   }
 ];

@@ -13,7 +13,7 @@ export const useCustomEstudios = () => {
   const imageMap = {
     'Obras Civiles': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299236/obrasciviles.jpg_qsttt4.png',
 
-    'Análisis y Desarrollo de Software': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760313676/enproceso_g4h0n3.png',
+    'Análisis y Desarrollo de Software': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1764207361/diplomadve_jhmrwp.jpg',
 
     'Apliacion de la hoja de la hoja de calculo de microsoft excel en levantamientos topograficos planimetricos': 'https://res.cloudinary.com/dkz51cyxl/image/upload/v1760299240/planimetria_yqe6yj.png',
 
